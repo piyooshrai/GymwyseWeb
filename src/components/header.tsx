@@ -19,15 +19,32 @@ const solutions = [
     desc: "Multi-location portfolio tools",
   },
   {
-    name: "Multi-Location Operators (6+)",
-    href: "/solutions/multi-location",
-    desc: "Enterprise-grade scaling",
-  },
-  {
     name: "Boutique Fitness Studios",
     href: "/solutions/boutique-fitness",
     desc: "Yoga, pilates, barre studios",
   },
+  {
+    name: "Reduce Member Churn",
+    href: "/reduce-gym-member-churn",
+    desc: "AI-powered retention tools",
+  },
+  {
+    name: "Increase Revenue",
+    href: "/increase-gym-revenue",
+    desc: "Revenue analytics & optimization",
+  },
+];
+
+const verticals = [
+  { name: "Yoga Studios", href: "/yoga-studio-software" },
+  { name: "CrossFit Gyms", href: "/crossfit-gym-software" },
+  { name: "MMA Gyms", href: "/mma-gym-software" },
+  { name: "Pilates Studios", href: "/pilates-studio-software" },
+  { name: "Dance Studios", href: "/dance-studio-software" },
+  { name: "Barre Studios", href: "/barre-studio-software" },
+  { name: "Bootcamps", href: "/bootcamp-software" },
+  { name: "PT Studios", href: "/personal-training-studio-software" },
+  { name: "Climbing Gyms", href: "/climbing-gym-software" },
 ];
 
 const resources = [
@@ -35,6 +52,10 @@ const resources = [
   { name: "Case Studies", href: "/case-studies" },
   { name: "ROI Calculator", href: "/roi-calculator" },
   { name: "Migration Guides", href: "/migration" },
+  { name: "Class Scheduling", href: "/gym-class-scheduling" },
+  { name: "Payment Processing", href: "/gym-payment-processing" },
+  { name: "Billing Software", href: "/gym-billing-software" },
+  { name: "PT Software", href: "/personal-training-software" },
 ];
 
 export function Header() {
@@ -88,6 +109,39 @@ export function Header() {
                         <div className="text-xs text-dim-gray mt-0.5">
                           {item.desc}
                         </div>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Verticals Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setOpenDropdown("verticals")}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button className="flex items-center gap-1 px-3 py-2 text-sm text-cool-gray hover:text-pure-white transition-colors cursor-pointer">
+                By Gym Type
+                <ChevronDown className="w-3.5 h-3.5" />
+              </button>
+              <AnimatePresence>
+                {openDropdown === "verticals" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-0 w-56 glass-card p-2 mt-1"
+                  >
+                    {verticals.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2.5 rounded-lg hover:bg-white/5 transition-colors text-sm text-cool-gray hover:text-pure-white"
+                      >
+                        {item.name}
                       </Link>
                     ))}
                   </motion.div>
@@ -178,6 +232,21 @@ export function Header() {
                   Solutions
                 </span>
                 {solutions.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block py-2 text-sm text-cool-gray hover:text-pure-white"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="py-2">
+                <span className="text-xs font-medium text-dim-gray uppercase tracking-wider">
+                  By Gym Type
+                </span>
+                {verticals.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
