@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ConversionElements } from "@/components/conversion/conversion-elements";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Header />
         <main className="pt-16">{children}</main>
         <Footer />
+        <ConversionElements />
       </body>
     </html>
   );

@@ -1,4 +1,26 @@
 import type { MetadataRoute } from "next";
+import { cityPages } from "@/lib/city-data";
+
+const verticalSlugs = [
+  "yoga-studio-software",
+  "crossfit-gym-software",
+  "mma-gym-software",
+  "pilates-studio-software",
+  "dance-studio-software",
+  "barre-studio-software",
+  "bootcamp-software",
+  "personal-training-studio-software",
+  "climbing-gym-software",
+];
+
+const problemSolutionSlugs = [
+  "reduce-gym-member-churn",
+  "increase-gym-revenue",
+  "gym-payment-processing",
+  "gym-class-scheduling",
+  "personal-training-software",
+  "gym-billing-software",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://gymwyse.fit";
@@ -30,5 +52,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/migration`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.6 },
     { url: `${baseUrl}/case-studies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+
+    // Niche Vertical Pages
+    ...verticalSlugs.map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+
+    // Problem/Solution SEO Pages
+    ...problemSolutionSlugs.map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+
+    // City Landing Pages
+    ...cityPages.map((city) => ({
+      url: `${baseUrl}/${city.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
   ];
 }
