@@ -95,7 +95,7 @@ export function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 w-72 glass-card p-2 mt-1"
+                    className="absolute top-full left-0 w-72 bg-[#0d1230] border border-glass-border rounded-xl p-2 mt-1 shadow-2xl shadow-black/60"
                   >
                     {solutions.map((item) => (
                       <Link
@@ -133,7 +133,7 @@ export function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 w-56 glass-card p-2 mt-1"
+                    className="absolute top-full left-0 w-56 bg-[#0d1230] border border-glass-border rounded-xl p-2 mt-1 shadow-2xl shadow-black/60"
                   >
                     {verticals.map((item) => (
                       <Link
@@ -180,7 +180,7 @@ export function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 w-56 glass-card p-2 mt-1"
+                    className="absolute top-full left-0 w-56 bg-[#0d1230] border border-glass-border rounded-xl p-2 mt-1 shadow-2xl shadow-black/60"
                   >
                     {resources.map((item) => (
                       <Link
