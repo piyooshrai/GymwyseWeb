@@ -8,10 +8,10 @@ interface BentoCardProps {
   className?: string;
   title: string;
   description: string;
-  image?: string;
   badge?: string;
   stats?: { label: string; value: string }[];
   cta?: string;
+  visual?: React.ReactNode;
 }
 
 export function BentoCard({
@@ -21,6 +21,7 @@ export function BentoCard({
   badge,
   stats,
   cta,
+  visual,
 }: BentoCardProps) {
   return (
     <motion.div
@@ -61,10 +62,11 @@ export function BentoCard({
           </div>
         )}
 
-        {/* Placeholder for image */}
-        <div className="flex-1 bg-slate-surface/50 rounded-lg min-h-[120px] flex items-center justify-center mb-4">
-          <span className="text-dim-gray text-sm">Dashboard Preview</span>
-        </div>
+        {visual && (
+          <div className="flex-1 rounded-lg min-h-[120px] mb-4 overflow-hidden">
+            {visual}
+          </div>
+        )}
 
         {cta && (
           <button className="inline-flex items-center gap-2 text-sm font-medium text-electric-green group-hover:gap-3 transition-all mt-auto">
