@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
   Calendar,
@@ -11,6 +12,10 @@ import {
   CreditCard,
   BarChart3,
   Smartphone,
+  ChevronDown,
+  CheckCircle,
+  Calculator,
+  ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BlurredDashboardHero } from "@/components/visuals/blurred-dashboard-hero";
@@ -226,7 +231,42 @@ const featureVisuals = [
   RevenueBreakdownVisual,
 ];
 
+/* ── Internal links data ─────────────────────── */
+
+const internalLinks = [
+  {
+    href: "/reduce-gym-member-churn",
+    label: "Reduce Gym Member Churn",
+  },
+  {
+    href: "/increase-gym-revenue",
+    label: "Increase Gym Revenue",
+  },
+  {
+    href: "/gym-class-scheduling",
+    label: "Gym Class Scheduling",
+  },
+  {
+    href: "/gym-billing-software",
+    label: "Gym Billing Software",
+  },
+  {
+    href: "/gym-payment-processing",
+    label: "Gym Payment Processing",
+  },
+  {
+    href: "/personal-training-software",
+    label: "Personal Training Software",
+  },
+];
+
 export function VerticalPageTemplate({ data }: { data: VerticalPageData }) {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
     <>
       {/* Hero */}
@@ -303,6 +343,60 @@ export function VerticalPageTemplate({ data }: { data: VerticalPageData }) {
         </div>
       </section>
 
+      {/* Solution Overview */}
+      {data.solutionOverview && (
+        <section className="py-24 md:py-32 bg-deep-space">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="glass-card p-8 md:p-12 border-l-4 border-l-electric-green">
+                <h2 className="text-3xl md:text-4xl font-bold text-pure-white mb-6">
+                  How GymWyse Solves This
+                </h2>
+                <p className="text-lg text-soft-white leading-relaxed">
+                  {data.solutionOverview}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Mid-content CTA - Calculate Your ROI */}
+      <section className="py-16 bg-midnight">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            className="max-w-3xl mx-auto text-center glass-card p-8 md:p-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-14 h-14 bg-electric-green/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <Calculator className="w-7 h-7 text-electric-green" />
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-pure-white mb-4">
+              See What GymWyse Can Save You
+            </h3>
+            <p className="text-soft-white mb-8">
+              Use our free ROI calculator to estimate how much time and revenue
+              you could gain by switching to GymWyse.
+            </p>
+            <Link href="/roi-calculator">
+              <Button variant="primary" size="lg">
+                Calculate Your ROI
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">
@@ -324,9 +418,22 @@ export function VerticalPageTemplate({ data }: { data: VerticalPageData }) {
                   <h3 className="text-xl font-semibold text-pure-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-cool-gray leading-relaxed mb-6">
+                  <p className="text-sm text-cool-gray leading-relaxed mb-4">
                     {feature.description}
                   </p>
+                  {feature.details && feature.details.length > 0 && (
+                    <ul className="space-y-2 mb-6">
+                      {feature.details.map((detail, j) => (
+                        <li key={j} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-electric-green mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-soft-white">
+                            {detail}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {!feature.details && <div className="mb-2" />}
                   {i === 0 && (
                     <BlurredDashboardHero
                       metrics={[
@@ -354,6 +461,50 @@ export function VerticalPageTemplate({ data }: { data: VerticalPageData }) {
           </div>
         </div>
       </section>
+
+      {/* Industry Trends */}
+      {data.trends && data.trends.length > 0 && (
+        <section className="py-24 md:py-32 bg-midnight">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-pure-white text-center mb-4">
+                Industry Trends
+              </h2>
+              <p className="text-center text-soft-white mb-16 max-w-2xl mx-auto">
+                Stay ahead of the curve with insights shaping the{" "}
+                {data.verticalName.toLowerCase()} industry.
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {data.trends.map((trend, i) => (
+                <motion.div
+                  key={i}
+                  className="glass-card p-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-10 h-10 bg-electric-green/10 rounded-lg flex items-center justify-center mb-5">
+                    <TrendingUp className="w-5 h-5 text-electric-green" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-pure-white mb-3">
+                    {trend.title}
+                  </h3>
+                  <p className="text-sm text-cool-gray leading-relaxed">
+                    {trend.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Testimonial */}
       <section className="py-24 md:py-32 bg-midnight">
@@ -398,12 +549,243 @@ export function VerticalPageTemplate({ data }: { data: VerticalPageData }) {
                 ))}
               </div>
             </div>
+
+            {/* Before/After Metrics */}
+            {data.testimonial.beforeAfter &&
+              data.testimonial.beforeAfter.length > 0 && (
+                <div className="mt-10 pt-10 border-t border-glass-border/50">
+                  <h4 className="text-lg font-semibold text-pure-white mb-6 text-center">
+                    Before &amp; After GymWyse
+                  </h4>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {data.testimonial.beforeAfter.map((item, i) => (
+                      <motion.div
+                        key={i}
+                        className="bg-deep-space/60 rounded-lg p-5 border border-glass-border text-center"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: i * 0.08 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="text-xs text-dim-gray uppercase tracking-wider mb-3">
+                          {item.metric}
+                        </div>
+                        <div className="flex items-center justify-center gap-3">
+                          <span className="text-sm text-alert-red font-mono line-through">
+                            {item.before}
+                          </span>
+                          <ArrowRight className="w-4 h-4 text-electric-green" />
+                          <span className="text-lg font-bold text-electric-green font-mono">
+                            {item.after}
+                          </span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      {data.comparison && (
+        <section className="py-24 md:py-32 bg-deep-space">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-pure-white text-center mb-4">
+                GymWyse vs {data.comparison.competitor}
+              </h2>
+              <p className="text-center text-soft-white mb-16 max-w-2xl mx-auto">
+                See how GymWyse stacks up against {data.comparison.competitor}{" "}
+                for {data.verticalName.toLowerCase()}.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="glass-card overflow-hidden">
+                {/* Table Header */}
+                <div className="grid grid-cols-3 bg-deep-space/80 border-b border-glass-border">
+                  <div className="p-4 md:p-6 text-sm font-semibold text-dim-gray">
+                    Feature
+                  </div>
+                  <div className="p-4 md:p-6 text-sm font-semibold text-electric-green text-center">
+                    GymWyse
+                  </div>
+                  <div className="p-4 md:p-6 text-sm font-semibold text-dim-gray text-center">
+                    {data.comparison.competitor}
+                  </div>
+                </div>
+
+                {/* Table Rows */}
+                {data.comparison.rows.map((row, i) => (
+                  <motion.div
+                    key={i}
+                    className="grid grid-cols-3 border-b border-glass-border/50 last:border-0"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="p-4 md:p-6 text-sm text-pure-white font-medium">
+                      {row.feature}
+                    </div>
+                    <div className="p-4 md:p-6 text-sm text-electric-green text-center">
+                      {row.gymwyse}
+                    </div>
+                    <div className="p-4 md:p-6 text-sm text-cool-gray text-center">
+                      {row.competitor}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Switch Reasons */}
+              {data.comparison.switchReasons.length > 0 && (
+                <motion.div
+                  className="mt-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-xl font-semibold text-pure-white mb-6 text-center">
+                    Why {data.verticalName} Switch to GymWyse
+                  </h3>
+                  <ul className="space-y-3 max-w-2xl mx-auto">
+                    {data.comparison.switchReasons.map((reason, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-electric-green mt-0.5 flex-shrink-0" />
+                        <span className="text-soft-white">{reason}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {data.faq && data.faq.length > 0 && (
+        <section className="py-24 md:py-32 bg-midnight">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-pure-white text-center mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-center text-soft-white mb-16 max-w-2xl mx-auto">
+                Common questions from {data.verticalName.toLowerCase()} about
+                GymWyse.
+              </p>
+            </motion.div>
+
+            <div className="max-w-3xl mx-auto space-y-4">
+              {data.faq.map((item, i) => (
+                <motion.div
+                  key={i}
+                  className="glass-card overflow-hidden"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <button
+                    onClick={() => toggleFaq(i)}
+                    className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
+                    aria-expanded={openFaqIndex === i}
+                  >
+                    <span className="text-base font-semibold text-pure-white pr-4">
+                      {item.question}
+                    </span>
+                    <motion.div
+                      animate={{ rotate: openFaqIndex === i ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex-shrink-0"
+                    >
+                      <ChevronDown className="w-5 h-5 text-electric-green" />
+                    </motion.div>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {openFaqIndex === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-6 pt-0">
+                          <div className="border-t border-glass-border/50 pt-4">
+                            <p className="text-sm text-cool-gray leading-relaxed">
+                              {item.answer}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Internal Links */}
+      <section className="py-24 md:py-32 bg-deep-space">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-pure-white text-center mb-4">
+              Explore More Solutions
+            </h2>
+            <p className="text-center text-soft-white mb-16 max-w-2xl mx-auto">
+              Discover how GymWyse helps {data.verticalName.toLowerCase()}{" "}
+              tackle every aspect of their business.
+            </p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {internalLinks.map((link, i) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Link
+                  href={link.href}
+                  className="glass-card p-6 flex items-center justify-between group hover:border-electric-green/30 transition-colors block"
+                >
+                  <span className="text-sm font-medium text-pure-white group-hover:text-electric-green transition-colors">
+                    {link.label}
+                  </span>
+                  <ExternalLink className="w-4 h-4 text-dim-gray group-hover:text-electric-green transition-colors flex-shrink-0" />
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing CTA */}
-      <section className="py-24 md:py-32 bg-deep-space">
+      <section className="py-24 md:py-32 bg-midnight">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-pure-white mb-6">
             Simple Pricing for {data.verticalName}
