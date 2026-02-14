@@ -82,7 +82,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse eliminates the scheduling chaos that comes with managing 15+ yoga class types, multiple teachers, and mixed pricing models. Our platform unifies drop-in payments, class pack tracking, and unlimited memberships into a single dashboard\u2014so you spend less time on admin and more time building your wellness community.",
+      "Yoga studios juggle a uniquely wide range of class formats\u2014from 105\u00b0F hot yoga sessions with strict capacity limits to gentle restorative classes where students bring bolsters and blankets. GymWyse was designed to handle this variety without forcing every class into the same template. Each of your 15+ class types gets its own capacity rules, duration settings, pricing tier, and room assignment. When your Prenatal class maxes out at 8 students in Studio B while your Saturday Vinyasa Flow fills 30 spots in the main hall, the system manages both without conflict.\n\nTeacher scheduling in yoga studios is more complex than most fitness businesses. Your instructors often teach across multiple studios, have specific style certifications (RYT-200, RYT-500, prenatal-certified), and need sub coverage during retreats and training intensives. GymWyse tracks each teacher's certifications, preferred class types, and blackout dates. When someone calls in sick for the 6 AM Ashtanga class, the system finds available subs who are actually qualified to teach that style\u2014not just whoever is free.\n\nRetail is the overlooked revenue stream for yoga studios. Your front desk sells mats, blocks, straps, essential oils, and branded apparel, but tracking inventory across locations or pop-up events is a headache. GymWyse's integrated POS connects retail sales to member profiles, so you can see that your regulars buy a new mat every 14 months and send a timely recommendation. Studios using our retail module report an average of $1,400 in additional monthly revenue within the first quarter.",
     features: [
       {
         title: "Unlimited Class Types",
@@ -254,7 +254,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse gives box owners a single platform to program WODs, run competitions, and manage the complex pricing tiers that CrossFit demands. From barbell club memberships to open gym punch cards, every revenue stream is tracked in real time\u2014so you can focus on coaching athletes instead of wrestling with spreadsheets.",
+      "CrossFit boxes run on community, competition, and measurable progress\u2014but most gym software treats every facility like a globo gym with treadmills. GymWyse is built around how boxes actually operate. Your WOD goes up each morning on the member app and displays on the gym TV. Athletes log their scores after class, see where they rank, and track PRs over time. When someone hits a new 1RM clean and jerk, it shows up on the PR board automatically. That visibility is what keeps athletes coming back day after day.\n\nPricing at a CrossFit box is never simple. You have unlimited members who come five days a week, barbell club members who only lift on weekends, open gym punch cards for drop-ins, and competition team members who pay extra for programming. GymWyse handles each tier independently with its own access rules\u2014barbell club members can only book into designated lifting sessions, while unlimited members see the full schedule. No more manually checking who is allowed in which class.\n\nThe real differentiator is competition management. Whether you are hosting a Friday Night Lights throwdown for 40 athletes or organizing a charity competition with 150 participants across 8 heats, GymWyse manages registration, heat scheduling, scoring, and live leaderboards. Athletes leave when progress stalls\u2014the PR tracking and benchmark workout comparisons give coaches visibility into who is plateauing so they can adjust programming or have a conversation before that athlete quietly stops showing up.",
     features: [
       {
         title: "WOD Programming Hub",
@@ -339,20 +339,21 @@ export const verticalPages: VerticalPageData[] = [
       ],
     },
     comparison: {
-      competitor: "WodBoard",
+      competitor: "Wodify",
       rows: [
-        { feature: "All-in-One Platform", gymwyse: "Billing, scheduling, WODs, and POS in one tool", competitor: "WOD tracking only\u2014needs separate billing software" },
-        { feature: "Starter Pricing", gymwyse: "$99/mo for everything", competitor: "$75/mo + separate billing tool ($100+/mo)" },
-        { feature: "Member App", gymwyse: "Branded app with booking, WODs, and payments", competitor: "Generic app with WOD logging only" },
-        { feature: "Competition Management", gymwyse: "Full event builder with heats, lanes, and live scoring", competitor: "Basic leaderboard without event management" },
-        { feature: "Payment Processing", gymwyse: "Built-in with 2.5% rate", competitor: "Not available\u2014requires third-party" },
-        { feature: "Capacity & Waitlists", gymwyse: "Auto-managed with push notifications", competitor: "Manual cap setting, no waitlist" },
-        { feature: "Retail POS", gymwyse: "Full POS for gear, supplements, and apparel", competitor: "Not available" },
+        { feature: "Monthly Price", gymwyse: "$99/mo flat rate with all features included", competitor: "$149-$399/mo depending on tier; performance tracking costs extra on lower plans" },
+        { feature: "WOD Programming", gymwyse: "Built-in programming with TV display, athlete scoring, and integration with SugarWOD/BTWB", competitor: "Native WOD publishing and scoring, but third-party integrations are limited" },
+        { feature: "Competition Management", gymwyse: "Full event system: registration, heats, live scoring, leaderboards, and spectator tickets", competitor: "Basic competition scoring available; no heat management or ticket sales" },
+        { feature: "Barbell Club / Tiered Access", gymwyse: "Unlimited membership tiers with per-tier session access rules\u2014barbell club sees only lifting sessions", competitor: "Membership tiers available but session restriction rules require manual workarounds" },
+        { feature: "PR Board & Benchmarks", gymwyse: "Auto-populated PR board from workout logs with historical trend charts per athlete", competitor: "PR tracking available within performance module (higher tier required)" },
+        { feature: "Retail & Merchandise POS", gymwyse: "Included\u2014sell apparel, gear, and supplements with inventory tracking", competitor: "Basic retail available on Engage plan ($249/mo+)" },
+        { feature: "Member Community Features", gymwyse: "Social feed, attendance challenges, milestone badges, and referral tracking built-in", competitor: "Community feed available but limited to workout comments; no challenge or badge system" },
+        { feature: "Contract & Switching", gymwyse: "Month-to-month, free data migration from Wodify within 48 hours", competitor: "Annual contract discounts encouraged; migrating data out requires CSV exports" },
       ],
       switchReasons: [
-        "Consolidate from 2-3 tools into one platform\u2014boxes using WodBoard typically also pay for Wodify or PushPress for billing, adding $100-200/month in extra costs.",
-        "Get competition management with live scoring, heat sheets, and automatic ranking\u2014features that WodBoard lacks entirely and that boxes otherwise manage with Google Sheets.",
-        "Built-in payment processing and retail POS mean you stop losing revenue to cash-only merch sales and can finally track supplement and apparel income alongside membership dues.",
+        "Wodify charges $249-$399/month for features like retail POS and advanced performance tracking that GymWyse includes at $99/month\u2014boxes switching save $1,800-$3,600 per year without losing any functionality.",
+        "GymWyse's competition management handles everything from registration to live leaderboards in one system, eliminating the spreadsheets and third-party scoring tools most boxes cobble together for throwdowns on Wodify.",
+        "Athlete retention tools in GymWyse proactively flag members whose attendance is declining so coaches can intervene\u2014Wodify shows attendance data but does not trigger alerts or automate re-engagement outreach.",
       ],
     },
     faq: [
@@ -426,7 +427,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse handles the unique complexity of combat sports gyms\u2014multi-discipline scheduling across mats and rings, belt progression tracking for every art, and separate management of recreational members and competition fighters. One platform replaces the patchwork of spreadsheets, WhatsApp groups, and paper waivers that most MMA gyms rely on.",
+      "MMA gyms are fundamentally different from any other fitness business\u2014you are running what amounts to 4-5 separate sports academies under one roof. Your BJJ classes need mat space, your Muay Thai sessions need bag racks and a ring, your wrestling practices overlap with open mat time, and your competitive fighters train on an entirely different schedule than recreational students. GymWyse was built to manage this multi-discipline complexity without forcing every class into a generic template.\n\nBelt and rank progression is the backbone of student retention in martial arts, yet most gym software ignores it completely. GymWyse tracks each student's rank across every discipline they train\u2014blue belt in BJJ, Level 3 in Muay Thai, and beginner in Wrestling, all on one profile. When a student hits the attendance and time-in-rank requirements for their next belt, the system auto-notifies the head instructor so promotions do not fall through the cracks. Fighters quit between belt ranks when they feel invisible\u2014automated promotion timelines and stripe ceremonies keep them engaged through the long plateaus.\n\nLiability management in combat sports is non-negotiable. GymWyse handles digital waivers that auto-expire and require annual renewal\u2014no more binders of paper forms that may or may not be current. Equipment condition tracking via QR codes lets staff log mat cleaning, bag inspections, and glove sanitization on a schedule. When a parent signs their 14-year-old up for youth BJJ, the system captures the guardian's waiver, emergency contacts, and medical disclosures before the kid ever steps on the mat.",
     features: [
       {
         title: "Multi-Discipline Management",
@@ -512,20 +513,21 @@ export const verticalPages: VerticalPageData[] = [
       ],
     },
     comparison: {
-      competitor: "Kicksite",
+      competitor: "Zen Planner",
       rows: [
-        { feature: "Multi-Discipline Scheduling", gymwyse: "Unlimited disciplines with per-area capacity controls", competitor: "Basic scheduling without area-specific limits" },
-        { feature: "Starter Pricing", gymwyse: "$99/mo flat, unlimited members", competitor: "$99/mo for up to 200 students, $199 for more" },
-        { feature: "Belt Progression", gymwyse: "Fully configurable per art with auto-eligibility alerts", competitor: "Belt tracking available but limited customization" },
-        { feature: "Competition Fight Records", gymwyse: "Full fighter profiles with weight tracking and bout history", competitor: "No built-in competition management" },
-        { feature: "Equipment Tracking", gymwyse: "QR-code based with condition monitoring", competitor: "Not available" },
-        { feature: "Branded Mobile App", gymwyse: "Included\u2014booking, waivers, belt progress, and payments", competitor: "Basic member portal, no branded app" },
-        { feature: "Incident Reporting", gymwyse: "Built-in forms with photo uploads and insurance integration", competitor: "Not available\u2014requires separate system" },
+        { feature: "Monthly Price", gymwyse: "$99/mo flat rate, all features included", competitor: "$117-$248/mo depending on member count; features vary by tier" },
+        { feature: "Multi-Discipline Scheduling", gymwyse: "Dedicated area assignments per discipline with color-coded master view and conflict prevention", competitor: "Class scheduling available but no discipline-specific area management or conflict detection" },
+        { feature: "Belt & Rank Tracking", gymwyse: "Custom rank ladders per discipline with attendance-based auto-promotion alerts and ceremony roster generation", competitor: "Basic rank field on member profiles; no automated promotion criteria or ceremony management" },
+        { feature: "Digital Waivers", gymwyse: "Auto-expiring waivers that block check-in until renewed; minor waivers with guardian signatures", competitor: "Digital waivers available but no auto-expiration enforcement or check-in blocking" },
+        { feature: "Equipment QR Tracking", gymwyse: "QR codes on mats and equipment for cleaning logs, condition tracking, and inspection schedules", competitor: "No equipment tracking functionality" },
+        { feature: "Competition & Fight Records", gymwyse: "Fighter profiles with competition history, weight tracking, and fight team membership tiers", competitor: "No built-in competition management or fighter record tracking" },
+        { feature: "Youth Program Management", gymwyse: "Age-gated classes, guardian waivers, skills progression cards, and parent communication portal", competitor: "Standard class types work for youth but no age-gating, guardian portal, or skills tracking" },
+        { feature: "Onboarding & Migration", gymwyse: "Free migration from Zen Planner with member data, ranks, and billing history within 48 hours", competitor: "Data export available via CSV; no assisted migration to competing platforms" },
       ],
       switchReasons: [
-        "Eliminate per-student pricing that punishes growth\u2014Kicksite charges $199/month once you exceed 200 students, while GymWyse stays at $99/month regardless of member count.",
-        "Get purpose-built competition management with fighter profiles, weight tracking, and bout records that Kicksite simply doesn\u2019t offer, replacing the spreadsheets most MMA gyms use for fight camps.",
-        "Built-in QR-code equipment tracking and incident reporting tools protect your gym from liability exposure\u2014critical for combat sports\u2014without needing separate systems.",
+        "Zen Planner has no belt progression tracking with promotion automation\u2014GymWyse auto-notifies instructors when students meet rank criteria, which directly reduces the churn that happens when students feel overlooked between belt levels.",
+        "MMA gyms switching from Zen Planner gain equipment QR tracking for mat cleaning logs and gear inspections\u2014a feature that does not exist in Zen Planner but is essential for liability protection in combat sports.",
+        "GymWyse's multi-discipline area management prevents the mat-space double-bookings that plague MMA gyms using Zen Planner's generic room scheduling, saving an average of 3-4 scheduling conflicts per week.",
       ],
     },
     faq: [
@@ -540,9 +542,9 @@ export const verticalPages: VerticalPageData[] = [
           "Yes. GymWyse lets you configure separate belt/rank systems for each discipline\u2014BJJ belts with stripes, Muay Thai armband levels, Judo kyu/dan ranks, or any custom system you define. Each student\u2019s profile shows their rank in every art they train, along with attendance minimums and time-in-rank toward the next promotion.",
       },
       {
-        question: "How do I migrate from Kicksite to GymWyse?",
+        question: "How do I migrate from Zen Planner to GymWyse?",
         answer:
-          "Our migration team handles the full transfer\u2014student database, billing agreements, belt ranks, attendance history, and waiver records. Most MMA gym migrations from Kicksite complete in 4-6 business days with no disruption to your class schedule or billing cycles. We also import any existing trial memberships and class packs.",
+          "Our migration team handles the full transfer\u2014student database, billing agreements, belt ranks, attendance history, and waiver records. Most MMA gym migrations from Zen Planner complete in 4-6 business days with no disruption to your class schedule or billing cycles. We also import any existing trial memberships and class packs.",
       },
       {
         question: "How does scheduling work for a gym with 5+ disciplines and shared mat space?",
@@ -593,7 +595,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse is purpose-built for the equipment-intensive world of Pilates\u2014where every reformer, Cadillac, and Wunda chair must be booked precisely, and private sessions require entirely different scheduling logic than group classes. Our platform handles equipment-level booking, tiered session pricing, and instructor certification tracking so studio directors can deliver the premium experience their clients expect.",
+      "Pilates studios operate under constraints that no other fitness business faces. You have 8 reformers, and when they are booked, the class is full\u2014there is no squeezing in one more person. A private session at $85 requires completely different scheduling logic than a group reformer class at $28 per head, and your instructor who is Stott-certified on the Cadillac cannot be swapped with someone who only has mat certification. GymWyse handles all of this at the equipment level, not just the class level.\n\nThe private-to-group revenue mix is where Pilates studios live or die. Private sessions ($75-$120) and duets ($50-$65 per person) generate the highest margins but require precise calendar management across multiple instructors. GymWyse gives each instructor their own booking calendar with session-type restrictions based on their certification level. A client booking a duet can send an invite link to their partner, and the system handles the split pricing automatically. Semi-private sessions for 3-4 clients slot into the schedule with their own capacity rules and pricing\u2014no awkward workarounds.\n\nInstructor certification tracking matters in Pilates more than almost any other modality. Your insurance likely requires specific certifications (Stott, BASI, Balanced Body, Classical) for each apparatus an instructor teaches on. GymWyse stores every certification with its issuing body, level, and expiration date, then restricts class assignments accordingly. When a Balanced Body certification is 90 days from expiring, the system alerts both the instructor and the studio director so there is time to complete continuing education credits before the renewal deadline hits.",
     features: [
       {
         title: "Equipment-Based Booking",
@@ -678,20 +680,21 @@ export const verticalPages: VerticalPageData[] = [
       ],
     },
     comparison: {
-      competitor: "Mindbody",
+      competitor: "Momoyoga",
       rows: [
-        { feature: "Equipment-Level Booking", gymwyse: "Book specific reformers/stations by number", competitor: "Class-level booking only\u2014no equipment assignment" },
-        { feature: "Starter Pricing", gymwyse: "$99/mo flat", competitor: "$139/mo + transaction fees" },
-        { feature: "Private Session Scheduling", gymwyse: "Dedicated private/duet/semi-private workflow", competitor: "Uses same class booking flow\u2014not optimized for 1:1" },
-        { feature: "Certification Tracking", gymwyse: "Tracks Stott, BASI, Balanced Body with auto-alerts", competitor: "Basic instructor profiles without certification management" },
-        { feature: "Branded Mobile App", gymwyse: "Included on all plans", competitor: "$199/mo add-on" },
-        { feature: "Client Progress Notes", gymwyse: "Per-session instructor notes visible to client", competitor: "Not available natively" },
-        { feature: "Equipment Maintenance Tracking", gymwyse: "Flag out-of-service equipment, auto-adjust capacity", competitor: "Not available" },
+        { feature: "Equipment-Level Booking", gymwyse: "Book specific reformers and stations by number with visual floor plan", competitor: "Class-level booking only\u2014no way for clients to select a specific reformer or station" },
+        { feature: "Monthly Price", gymwyse: "$99/mo flat rate with all features included", competitor: "Free tier limited to 15 students; paid plans from $11.99-$33.99/mo but lack equipment-level features" },
+        { feature: "Private/Duet/Semi-Private Workflows", gymwyse: "Dedicated booking flows for each session type with automatic pricing and instructor matching", competitor: "Single class booking flow\u2014private sessions require workarounds with appointment types" },
+        { feature: "Instructor Certification Tracking", gymwyse: "Tracks Stott, BASI, Balanced Body, Polestar with expiration alerts and class assignment restrictions", competitor: "Basic instructor profiles without certification management or apparatus-based restrictions" },
+        { feature: "Client Progress Notes", gymwyse: "Per-session instructor notes visible to client in app\u2014builds continuity across instructors", competitor: "No client-facing session notes; internal notes only" },
+        { feature: "Equipment Maintenance Scheduling", gymwyse: "Flag reformers as out-of-service with auto-capacity adjustment; maintenance history per machine", competitor: "No equipment maintenance tracking" },
+        { feature: "Branded Mobile App", gymwyse: "Included\u2014clients book equipment, view notes, and manage payments in your branded app", competitor: "Generic Momoyoga-branded app; no custom branding for your studio" },
+        { feature: "Retail POS", gymwyse: "Full POS for grip socks, apparel, and accessories with inventory tracking", competitor: "No retail or point-of-sale functionality" },
       ],
       switchReasons: [
-        "Equipment-level booking eliminates the double-booking chaos that plagues Pilates studios using Mindbody\u2014clients book a specific reformer, not just a class slot, so you never have more people than machines.",
-        "Save over $2,400/year by getting the branded mobile app included at no extra cost, compared to Mindbody\u2019s $199/month add-on that most premium Pilates studios feel pressured to buy.",
-        "Purpose-built private session workflows replace the awkward workarounds Mindbody studios use for 1:1 booking\u2014with duet invite links, instructor progress notes, and session-type-specific pricing that just works.",
+        "Momoyoga was designed for yoga studios and lacks equipment-level booking\u2014Pilates studios using it cannot assign specific reformers to clients, leading to confusion and overbooking when class sizes bump against machine counts.",
+        "GymWyse's private session workflows with duet invite links, session-type pricing, and instructor progress notes are purpose-built for the private/semi-private model that drives 55-65% of Pilates studio revenue\u2014Momoyoga treats every session like a group class.",
+        "Pilates studios outgrow Momoyoga's limited feature set quickly\u2014GymWyse includes certification tracking, equipment maintenance scheduling, and retail POS that Momoyoga does not offer, eliminating the need for separate tools.",
       ],
     },
     faq: [
@@ -706,9 +709,9 @@ export const verticalPages: VerticalPageData[] = [
           "Yes. GymWyse supports station-level booking where clients can select their preferred reformer, Cadillac, or Wunda chair by number. You can set up a visual floor plan so clients see available stations in real time. Capacity is automatically enforced based on available equipment\u2014if you have 10 reformers, only 10 spots are bookable.",
       },
       {
-        question: "How do I migrate from Mindbody to GymWyse?",
+        question: "How do I migrate from Momoyoga or ClubReady to GymWyse?",
         answer:
-          "Our dedicated migration team transfers your class schedule, client database, membership plans, private session history, and purchase records from Mindbody. The typical Pilates studio migration takes 5-7 business days with zero downtime. We also import instructor profiles, certification records, and any outstanding class pack balances.",
+          "Our dedicated migration team transfers your class schedule, client database, membership plans, private session history, and purchase records from Momoyoga, ClubReady, or any other platform. The typical Pilates studio migration takes 5-7 business days with zero downtime. We also import instructor profiles, certification records, and any outstanding class pack balances.",
       },
       {
         question: "How does scheduling work for a mix of private, duet, and group sessions?",
@@ -764,7 +767,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse brings order to the beautifully chaotic world of dance studio management\u2014from recital costume tracking and age-based class organization to competition team logistics and family billing. Our platform speaks the language of dance directors, handling the complexities of multi-child families, seasonal performances, and progressive leveling that generic fitness software simply cannot.",
+      "Dance studios have a scheduling structure unlike any other fitness business. Your Tiny Tots ballet class at 4 PM has 12 three-year-olds (with 12 parents in the lobby), your teen contemporary class at 5:30 PM runs 90 minutes with a different instructor, and your adult hip-hop drop-in at 7 PM uses yet another pricing model. GymWyse organizes classes by age division and skill level automatically, so parents enrolling their child see only age-appropriate options and the pricing adjusts based on the level and number of classes selected.\n\nRecital season is where dance studio software either saves you or buries you. You are tracking costume orders with sizing for 150 dancers, coordinating rehearsal schedules for kids who appear in 3 different numbers, managing ticket sales with family comp allocations, and communicating deadlines to parents who miss every email. GymWyse's recital module handles all of it\u2014costume assignments with sizing and payment tracking per dancer, rehearsal scheduling with automatic conflict detection for multi-number students, ticket sales with seat selection, and automated parent communications that go out on schedule whether you remember to send them or not.\n\nFamily billing is the other complexity unique to dance studios. When one family has three kids enrolled in a combined seven classes, plus costume fees, plus competition team dues, they need one clear invoice\u2014not three separate accounts with manual discount calculations. GymWyse consolidates everything into a single family account with automatic sibling discounts (10% second child, 15% third, configurable to your policy) and itemized statements that show parents exactly what they are paying for each child. Studios report that billing complaints drop by 80% after switching to consolidated family invoicing.",
     features: [
       {
         title: "Recital Management",
@@ -849,20 +852,21 @@ export const verticalPages: VerticalPageData[] = [
       ],
     },
     comparison: {
-      competitor: "Mindbody",
+      competitor: "Jackrabbit Dance",
       rows: [
-        { feature: "Recital Management", gymwyse: "Full recital builder with costumes, lineups, and ticket sales", competitor: "No recital-specific features" },
-        { feature: "Starter Pricing", gymwyse: "$99/mo flat", competitor: "$139/mo + transaction fees" },
-        { feature: "Family Billing with Sibling Discounts", gymwyse: "Automatic multi-child discounts with consolidated invoicing", competitor: "Separate accounts per student\u2014manual discounting only" },
-        { feature: "Age-Based Class Levels", gymwyse: "Built-in age divisions with progression tracking", competitor: "Generic class categories without level tracking" },
-        { feature: "Competition Team Management", gymwyse: "Travel logistics, fee collection, and score tracking", competitor: "Not available" },
-        { feature: "Costume & Fee Tracking", gymwyse: "Per-dancer costume orders, sizing, and payment tracking", competitor: "Not available\u2014requires separate tools" },
-        { feature: "Branded Mobile App", gymwyse: "Included\u2014parents see schedule, invoices, and recital info", competitor: "$199/mo add-on" },
+        { feature: "Recital Management", gymwyse: "Full recital builder with costumes, lineups, ticket sales, and automated parent communications", competitor: "Basic recital tracking with costume fields but no ticket sales, lineup builder, or automated communications" },
+        { feature: "Monthly Price", gymwyse: "$99/mo flat rate with all features included", competitor: "$59-$199/mo based on student count; many features require higher tiers" },
+        { feature: "Family Billing with Sibling Discounts", gymwyse: "Automatic multi-child discounts with fully consolidated family invoicing across all children", competitor: "Family accounts available but sibling discount automation is limited; invoicing can be confusing with multiple children" },
+        { feature: "Competition Team Management", gymwyse: "Travel logistics hub, installment-based fee collection, score tracking, and extra rehearsal scheduling", competitor: "Basic competition class tracking but no travel logistics, score tracking, or installment payment plans" },
+        { feature: "Age-Based Progression Tracking", gymwyse: "Built-in age divisions with skill assessments, level recommendations, and teacher evaluation notes", competitor: "Age-based class categories available but no integrated progression tracking or assessment tools" },
+        { feature: "Costume & Fee Tracking", gymwyse: "Per-dancer costume orders with sizing, payment status, and distribution tracking for each recital number", competitor: "Costume fee fields on student records but no per-number assignment, sizing collection, or distribution status" },
+        { feature: "Branded Mobile App for Parents", gymwyse: "Included\u2014parents see schedules, invoices, recital info, and costume deadlines in your branded app", competitor: "Parent portal available via web but no branded mobile app; parents access through browser" },
+        { feature: "Adult Class Drop-In Support", gymwyse: "Mixed model with family billing for kids and drop-in/class pack pricing for adults in one system", competitor: "Primarily designed for youth enrollment; adult drop-in and class pack workflows require workarounds" },
       ],
       switchReasons: [
-        "Purpose-built recital management replaces the Google Sheets, email chains, and paper sign-up forms that dance studios on Mindbody juggle every performance season\u2014saving directors 15+ hours per recital cycle.",
-        "Family billing with automatic sibling discounts and consolidated invoicing eliminates the #1 parent complaint at dance studios: confusing billing across multiple children enrolled in different classes.",
-        "Competition team features with travel logistics, installment-based fee collection, and score tracking are built in\u2014Mindbody has zero competition-specific functionality, forcing studios to use separate tools.",
+        "Jackrabbit's recital management covers basic costume fees but lacks the lineup builder, ticket sales integration, and automated parent communication workflows that GymWyse provides\u2014saving directors 15+ hours per recital cycle by eliminating the supplementary Google Sheets and email chains.",
+        "GymWyse's flat $99/month pricing does not scale with student count\u2014Jackrabbit charges up to $199/month for larger studios, and many features that GymWyse includes at base price require Jackrabbit's higher tiers.",
+        "Competition team management with travel logistics, installment payment plans, and score tracking is built into GymWyse\u2014Jackrabbit offers basic competition class tracking but nothing for the travel coordination and fee management that competition directors spend hours on each month.",
       ],
     },
     faq: [
@@ -935,7 +939,7 @@ export const verticalPages: VerticalPageData[] = [
       },
     ],
     solutionOverview:
-      "GymWyse is designed for boutique barre studios where every detail matters\u2014from maximizing revenue in 12-person classes to creating the seamless, premium booking experience your clients expect. Our platform combines small-class optimization, integrated retail POS, and a branded mobile app to help barre studios deliver the high-end experience that justifies premium pricing.",
+      "When your entire business model depends on filling 12 spots at $32 each, every empty mat costs you real money. Barre studios cannot absorb no-shows and late cancels the way a 50-person spin class can\u2014one absent client is an 8% revenue hit for that session. GymWyse's small-class optimization engine analyzes your historical fill rates by time slot, instructor, and class format to recommend the schedule that maximizes revenue per square foot. Late cancel and no-show policies are enforced automatically, and waitlist members get promoted with push notifications that fill empty spots before class starts.\n\nRetail is not a nice-to-have for barre studios\u2014it is a profit center. Grip socks alone can generate $800-$1,200 per month at a busy studio, and branded apparel and resistance accessories add another layer of margin. GymWyse's POS integrates retail into the check-in experience: when a client taps in for class, a prompt offers grip socks or a new tank top based on their purchase history. First-time visitors get a welcome bundle offer. The system tracks inventory, alerts you when best-sellers are running low, and reports retail revenue alongside class revenue so you see the full picture.\n\nThe boutique barre client expects a premium experience from the moment they open the app to the moment they leave the studio. GymWyse provides a fully branded mobile app with your logo, colors, and aesthetic\u2014no generic fitness platform branding. Clients book their preferred spot, instructor, and time with one tap. Milestone celebrations (50th class, birthday perks, one-year anniversary) happen automatically. Instructor ratings let you identify your strongest teachers and schedule them at your highest-demand time slots, while underperforming time slots get targeted push notifications to drive bookings.",
     features: [
       {
         title: "Small Class Optimization",
