@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -67,13 +68,15 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-electric-green rounded-lg flex items-center justify-center">
-              <span className="text-deep-space font-bold text-sm">GW</span>
-            </div>
-            <span className="text-lg font-semibold text-pure-white">
-              GymWyse
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logos/logo-white.png"
+              alt="GymWyse"
+              width={140}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

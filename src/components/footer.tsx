@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Platform: [
@@ -86,14 +87,15 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-electric-green rounded-lg flex items-center justify-center">
-              <span className="text-deep-space font-bold text-xs">GW</span>
-            </div>
-            <span className="text-sm font-semibold text-pure-white">
-              GymWyse
-            </span>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logos/logo-white.png"
+              alt="GymWyse"
+              width={120}
+              height={34}
+              className="h-8 w-auto"
+            />
+          </Link>
           <p className="text-sm text-dim-gray">
             &copy; {new Date().getFullYear()} GymWyse. All rights reserved.
           </p>
