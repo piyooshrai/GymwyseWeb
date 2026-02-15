@@ -22,6 +22,7 @@ import {
   Zap,
   MapPin,
   Quote,
+  Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -45,15 +46,21 @@ const features = [
   },
   {
     icon: Clock,
-    title: "Late Fee Management and Payment Plans",
+    title: "Late Fee Automation and Suspension Workflows",
     description:
-      "GymWyse gives you full control over late payment policies. You configure late fee rules per membership type — a flat fee or percentage charge that is automatically applied when a payment is overdue by a configurable number of days. Late fee application is fully automated with no staff intervention required. Members are notified before the late fee is applied, giving them a grace period to update their payment method or resolve the issue. For members experiencing financial hardship, GymWyse supports payment plans that split overdue balances into manageable instalments. You can create custom payment plans with configurable instalment amounts, frequencies, and durations. Payment plan progress is tracked on the member's profile, and the system automatically processes each instalment on schedule. This flexibility helps you retain members who might otherwise cancel due to temporary financial constraints while still recovering the revenue owed.",
+      "GymWyse automates the entire late payment lifecycle so your staff never has to manually chase overdue accounts. You configure late fee rules per membership type — a flat fee or percentage charge that is automatically applied when a payment is overdue by a configurable number of days. Late fee application is fully automated with no staff intervention required. Members are notified at each stage via email, SMS, and push notification, giving them a grace period to update their payment method or resolve the issue. Beyond late fees, GymWyse includes configurable suspension workflows that automatically restrict gym access when overdue balances exceed a threshold you define. For example, you might apply a $10 late fee at 7 days overdue, a second $15 fee at 14 days, and automatically suspend QR check-in access and class bookings at 21 days. When the member settles the balance, access is reinstated automatically — no staff action required. The entire workflow is visible on a dedicated overdue accounts dashboard where managers can see every member in the dunning pipeline, the stage they are at, and the outstanding amount. For members experiencing financial hardship, GymWyse supports payment plans that split overdue balances into manageable instalments with configurable amounts, frequencies, and durations. Payment plan progress is tracked on the member's profile, and the system automatically processes each instalment on schedule.",
   },
   {
     icon: BarChart3,
     title: "Financial Reporting and Payment Recovery",
     description:
-      "GymWyse provides comprehensive financial reporting that gives you real-time visibility into every aspect of your gym's billing operations. The reporting dashboard includes total revenue by period, outstanding receivables, failed payment rates, recovery rates, late fee revenue, payment method distribution, and ageing reports showing how long invoices have been overdue. Failed payment recovery runs automatically through a dunning engine that retries declined transactions with intelligent scheduling and sends personalised notifications to members with one-click payment update links. The system recovers an average of 40% of failed payments that would otherwise be permanently lost. All financial data can be exported to CSV and PDF, and GymWyse integrates natively with Xero and QuickBooks for automatic accounting synchronisation. Monthly and annual financial summaries are generated automatically and can be scheduled for delivery to your accountant, business partners, or investors on a recurring basis.",
+      "GymWyse provides comprehensive financial reporting that gives you real-time visibility into every aspect of your gym's billing operations. The reporting dashboard includes total revenue by period broken down by stream — membership fees, personal training, class packs, retail, and ancillary services — so you can see exactly which revenue lines are growing and which are underperforming. Outstanding balance reports show every member with an overdue amount sorted by ageing bucket (0-30 days, 31-60 days, 61-90 days, and 90+ days), giving you a clear accounts receivable position at all times. Revenue forecasting uses your current membership base, billing schedules, and historical churn rates to project future income with high accuracy. Failed payment recovery runs automatically through a dunning engine that retries declined transactions with intelligent scheduling and sends personalised notifications to members with one-click payment update links. The system recovers an average of 40% of failed payments that would otherwise be permanently lost. All financial data can be exported to CSV and PDF, and GymWyse integrates natively with Xero and QuickBooks for automatic accounting synchronisation. Monthly and annual financial summaries are generated automatically and can be scheduled for delivery to your accountant, business partners, or investors on a recurring basis.",
+  },
+  {
+    icon: Globe,
+    title: "Multi-Currency Support",
+    description:
+      "GymWyse supports billing in multiple currencies natively, making it the ideal platform for gym businesses operating across different markets. Supported currencies include USD for the United States, GBP for the United Kingdom, AUD for Australia, and AED for the United Arab Emirates. Each gym location is configured with its primary currency, and all invoices, reports, and member-facing billing displays use the correct currency symbol, formatting, and decimal conventions automatically. For gym chains operating across multiple countries, the central dashboard provides consolidated revenue reporting with automatic currency conversion at daily exchange rates, so you can view total group revenue in a single base currency without manually converting figures. Tax handling is also localised to each market — GymWyse supports GST for Australia, VAT for the United Kingdom, and configurable sales tax rates for US states and municipalities. Currency-specific payment methods are supported as well: ACH in the US, BACS Direct Debit in the UK, Australian Direct Debit and BPAY in Australia, and card payments globally via Stripe. This localisation ensures your invoices are professional and compliant regardless of where your gym operates.",
   },
 ];
 
@@ -69,7 +76,7 @@ const operationsOverview = [
 ];
 
 const caseStudyResults = [
-  { value: "12 hrs/wk", label: "Admin time saved on billing" },
+  { value: "15 hrs/wk", label: "Admin time saved on billing" },
   { value: "40%", label: "Failed payments recovered" },
   { value: "$0", label: "Billing errors per month (from $2,400)" },
   { value: "98.2%", label: "Collection rate (from 89%)" },
@@ -467,7 +474,7 @@ export function ProblemSolutionPage() {
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-cool-gray">
                     Crossroads Fitness managed billing manually across two
-                    locations. Two staff members spent a combined 12 hours
+                    locations. Two staff members spent a combined 15 hours
                     per week creating invoices in Excel, chasing overdue
                     payments via phone and email, calculating late fees
                     manually, and reconciling bank statements against their
