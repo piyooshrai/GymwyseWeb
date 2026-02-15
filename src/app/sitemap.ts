@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { cityPages } from "@/lib/city-data";
+import { blogPosts } from "@/lib/blog-data";
 
 const verticalSlugs = [
   "yoga-studio-software",
@@ -79,6 +80,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+
+    // Blog Posts
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
 
     // City Landing Pages
