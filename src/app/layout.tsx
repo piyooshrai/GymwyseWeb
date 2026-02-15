@@ -8,12 +8,17 @@ export const metadata: Metadata = {
   title: "GymWyse - Gym Management Software That Proves Its ROI",
   description:
     "Track revenue in real-time. Predict churn. Recover $12K+/month. The operating system for independent gyms and multi-location fitness operators.",
+  icons: {
+    icon: "/logos/logo-white.png",
+    apple: "/logos/logo-white.png",
+  },
   openGraph: {
     title: "GymWyse - Gym Software That Pays for Itself 18x Over",
     description:
       "Revenue analytics, churn prevention, and multi-location management for modern gyms.",
     url: "https://gymwyse.fit",
     siteName: "GymWyse",
+    images: [{ url: "/logos/logo-white.png", width: 800, height: 600 }],
     type: "website",
   },
   alternates: {
