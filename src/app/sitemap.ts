@@ -36,6 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/vs/glofox`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/vs/pushpress`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
 
+    // Platform Feature Pages
+    { url: `${baseUrl}/platform/revenue-analytics`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/platform/member-app`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/platform/equipment-qr`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+
     // Tier 2 - Solutions Pages
     { url: `${baseUrl}/solutions/independent-gyms`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/solutions/multi-location`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
