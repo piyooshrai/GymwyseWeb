@@ -128,24 +128,24 @@ const comparisonRows = [
 const testimonials = [
   {
     quote:
-      "Before GymWyse, our billing was a nightmare. Two staff members spent a combined 12 hours per week creating invoices, chasing overdue payments, calculating late fees, and reconciling our accounts. We had billing errors every month that led to member complaints and refund requests. GymWyse automated everything — invoices generate automatically, late fees apply themselves, and failed payments are recovered without anyone lifting a finger. We reassigned those 12 hours to member engagement and our retention improved.",
+      "We were running Mindbody for class scheduling but handling all billing through Excel spreadsheets because Mindbody's invoicing was too rigid for our membership tiers. Two staff members spent a combined 15 hours per week creating invoices, chasing overdue payments, and reconciling accounts. GymWyse replaced both systems with one platform — recurring billing runs on autopilot, branded invoices go out automatically, and the late fee suspension workflow means overdue members cannot check in until they settle their balance. We eliminated 15 hours of weekly admin and our outstanding balance dropped by 65% in the first quarter.",
     name: "Nicole Fischer",
     role: "Owner, Elevate Gym",
     location: "Portland, OR",
   },
   {
     quote:
-      "We switched from manual billing to GymWyse after a month where we discovered $2,400 in billing errors — members charged incorrect amounts, missed charges on frozen accounts, and invoices sent to the wrong email addresses. Since migrating to GymWyse, we have had zero billing errors in nine months. The automated system is more accurate, faster, and costs nothing in staff time. Our collection rate went from 89% to 98.2%.",
+      "We switched from Zen Planner to GymWyse primarily because of the billing automation. Zen Planner had basic recurring billing but no real late fee automation, no suspension workflows, and no payment plan functionality. When a member missed a payment, someone had to manually follow up. With GymWyse, the entire dunning sequence runs automatically — late fees apply at 7 days, access suspends at 21 days, and members get notifications with one-click payment links at every stage. Our collection rate went from 89% to 98.2% and we have had zero billing errors in nine months.",
     name: "Carlos Rivera",
     role: "Director, Momentum Fitness",
     location: "Las Vegas, NV",
   },
   {
     quote:
-      "The payment plan feature saved several memberships we would have lost. When a member falls behind, we can set up a structured repayment plan right in GymWyse instead of choosing between writing off the debt or losing the member entirely. The instalments process automatically and the member stays active. We have recovered over $8,000 in overdue balances through payment plans that we would have written off under our old system.",
-    name: "Hannah Park",
-    role: "Co-owner, True Grit Fitness",
-    location: "Raleigh, NC",
+      "Running three gym locations across Australia and the UAE meant dealing with AUD and AED billing, different tax rules, and completely separate systems. Glofox could not handle multi-currency at all, so we were running two different platforms and manually consolidating revenue reports. GymWyse supports both currencies natively with localised tax handling — GST in Australia and VAT configuration for the UAE. The Xero integration saves our bookkeeper hours every week because transactions sync automatically. The payment plan feature has also recovered over $8,000 in overdue balances that we would have written off entirely.",
+    name: "Sarah Whitfield",
+    role: "Director, Coastal Strength Group",
+    location: "Gold Coast, AU",
   },
 ];
 
@@ -191,6 +191,23 @@ export function ProblemSolutionPage() {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* ─── Hero Section ─── */}
       <section className="bg-deep-space py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
@@ -354,7 +371,7 @@ export function ProblemSolutionPage() {
               Billing Features in Detail
             </h2>
             <p className="mt-4 text-lg text-cool-gray">
-              Four pillars of automated billing that eliminate manual work
+              Six pillars of automated billing that eliminate manual work
               and maximise your collection rate.
             </p>
           </motion.div>
@@ -505,7 +522,7 @@ export function ProblemSolutionPage() {
                     with overdue balances, recovering $4,200 that would have
                     been written off. Within 90 days, the collection rate
                     improved from 89% to 98.2%, billing errors dropped to
-                    zero, and the 12 hours of weekly billing admin were
+                    zero, and the 15 hours of weekly billing admin were
                     eliminated entirely. Staff time was redirected to
                     member engagement and retention activities.
                   </p>
@@ -746,6 +763,26 @@ export function ProblemSolutionPage() {
               <span>No credit card required</span>
               <span>14-day free trial</span>
               <span>Cancel anytime</span>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+              <Link
+                href="/gym-payment-processing"
+                className="text-electric-green underline underline-offset-2 hover:brightness-110"
+              >
+                Payment Processing
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-electric-green underline underline-offset-2 hover:brightness-110"
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/roi-calculator"
+                className="text-electric-green underline underline-offset-2 hover:brightness-110"
+              >
+                ROI Calculator
+              </Link>
             </div>
           </motion.div>
         </div>

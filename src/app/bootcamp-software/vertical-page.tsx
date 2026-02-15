@@ -211,6 +211,51 @@ function HeartRateMonitorVisual() {
   );
 }
 
+/* ── FAQ data ─────────────────────── */
+
+const faqData = [
+  {
+    question: "How does the weather venue-switching feature work?",
+    answer:
+      "When weather threatens an outdoor session, you tap the venue switch button on the session in your dashboard. The system immediately moves the session to your pre-configured indoor backup location and sends simultaneous notifications via push notification, SMS, and email to every registered participant. The notifications include the new venue address, directions, and a link to GPS navigation. Members who check the app will also see the updated venue in real-time. The entire process takes under 30 seconds from decision to full participant notification. Weather forecast data is also displayed on your scheduling dashboard so you can make proactive decisions hours ahead of session time.",
+  },
+  {
+    question: "Can GymWyse handle sessions with 30 to 40 participants?",
+    answer:
+      "Yes. GymWyse is optimized for high-volume sessions typical of bootcamp operations. You can set capacity limits of any size for each session, and the registration system handles large-class check-ins efficiently with rapid mobile scan or self-check-in options. Waitlist management ensures you fill every available spot, and automatic waitlist promotion notifies participants when a spot opens. For sessions with 30-plus participants, the system supports group warm-up timers, section-based workout tracking, and heart rate zone displays that accommodate large participant counts on a single screen.",
+  },
+  {
+    question: "How does drop-in registration work for new clients who have never used GymWyse?",
+    answer:
+      "New drop-in clients can register and pay for a session directly from their mobile phone in under 60 seconds. They scan a QR code at the session location or click a booking link you share on social media, enter their name, email, and payment information, sign a digital waiver, and they are checked in and ready to train. No app download is required for the first visit. After their session, automated follow-up sequences offer class pack upgrades, invite them to upcoming challenge programs, and eventually present membership offers with social proof from challenge results. This frictionless entry point converts casual walk-ups into paying members without any manual effort from your team.",
+  },
+  {
+    question: "Does GymWyse support challenge programs like 6-week transformations?",
+    answer:
+      "Absolutely. The challenge program module supports programs of any duration with configurable milestones, progress tracking metrics including weigh-ins, body measurements, and progress photos, automated engagement sequences that celebrate completion milestones, participant leaderboards, and before-and-after photo galleries. Payment handling supports upfront pricing, installment plans, and early-bird discounts. The system tracks completion rates, dropout points, and challenge-to-membership conversion rates so you can optimize your programs over time. Most operators see challenge completion rates improve by 15 to 20 percentage points after implementing the automated engagement features.",
+  },
+  {
+    question: "Which heart rate monitoring systems integrate with GymWyse?",
+    answer:
+      "GymWyse integrates with MyZone, Polar, Wahoo, and Garmin heart rate monitoring systems. During live sessions, heart rate data streams to a coach dashboard that can be displayed on a shared screen for participant motivation and accountability. Post-session, each participant receives a personalized performance summary showing time in each heart rate zone, estimated calorie burn, average and peak heart rate, and effort points. Long-term trend reports track cardiovascular fitness improvements over weeks and months. The integration works with both chest strap and armband heart rate monitors from supported brands.",
+  },
+  {
+    question: "Can we manage multiple outdoor locations plus an indoor studio?",
+    answer:
+      "Yes. GymWyse supports unlimited venue locations, each with its own GPS coordinates, capacity limits, equipment lists, parking instructions, and amenity information. You can schedule sessions across multiple parks, beaches, fields, and indoor studios on the same day. Each venue has a designated indoor backup location for weather switching. Location-based check-in verifies that participants are at the correct venue, preventing confusion when concurrent sessions run at different outdoor locations. The scheduling calendar provides a color-coded venue view so you can see your full multi-location operation at a glance.",
+  },
+  {
+    question: "How does GymWyse handle corporate wellness partnerships?",
+    answer:
+      "GymWyse includes a corporate group management module that supports dedicated session scheduling for company teams, company-level billing with invoice generation, employee roster management with attendance tracking, and participation reporting formatted for HR departments. You can create branded landing pages for each corporate partner, set custom pricing tiers for group rates, and track individual employee attendance and performance. The system also manages the transition when corporate participants want to continue training individually with a personal membership, ensuring seamless billing changes and class access updates.",
+  },
+  {
+    question: "Is there a contract, and how does migration work?",
+    answer:
+      "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Mindbody, Glofox, or any other platform typically takes three to five business days. Our onboarding team handles member data import, billing migration with no payment interruption, venue configuration including GPS coordinates for all your outdoor locations, challenge program setup, and trainer training sessions. Most bootcamp operators are fully operational on GymWyse within one week. We provide bootcamp-specific onboarding guides that cover multi-venue setup, weather workflows, challenge program configuration, and heart rate monitor integration.",
+  },
+];
+
 /* ── Internal links ─────────────────────── */
 
 const internalLinks = [
@@ -233,6 +278,23 @@ export function VerticalPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* ═══════════ HERO ═══════════ */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">
@@ -984,48 +1046,7 @@ export function VerticalPage() {
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              {
-                question: "How does the weather venue-switching feature work?",
-                answer:
-                  "When weather threatens an outdoor session, you tap the venue switch button on the session in your dashboard. The system immediately moves the session to your pre-configured indoor backup location and sends simultaneous notifications via push notification, SMS, and email to every registered participant. The notifications include the new venue address, directions, and a link to GPS navigation. Members who check the app will also see the updated venue in real-time. The entire process takes under 30 seconds from decision to full participant notification. Weather forecast data is also displayed on your scheduling dashboard so you can make proactive decisions hours ahead of session time.",
-              },
-              {
-                question: "Can GymWyse handle sessions with 30 to 40 participants?",
-                answer:
-                  "Yes. GymWyse is optimized for high-volume sessions typical of bootcamp operations. You can set capacity limits of any size for each session, and the registration system handles large-class check-ins efficiently with rapid mobile scan or self-check-in options. Waitlist management ensures you fill every available spot, and automatic waitlist promotion notifies participants when a spot opens. For sessions with 30-plus participants, the system supports group warm-up timers, section-based workout tracking, and heart rate zone displays that accommodate large participant counts on a single screen.",
-              },
-              {
-                question: "How does drop-in registration work for new clients who have never used GymWyse?",
-                answer:
-                  "New drop-in clients can register and pay for a session directly from their mobile phone in under 60 seconds. They scan a QR code at the session location or click a booking link you share on social media, enter their name, email, and payment information, sign a digital waiver, and they are checked in and ready to train. No app download is required for the first visit. After their session, automated follow-up sequences offer class pack upgrades, invite them to upcoming challenge programs, and eventually present membership offers with social proof from challenge results. This frictionless entry point converts casual walk-ups into paying members without any manual effort from your team.",
-              },
-              {
-                question: "Does GymWyse support challenge programs like 6-week transformations?",
-                answer:
-                  "Absolutely. The challenge program module supports programs of any duration with configurable milestones, progress tracking metrics including weigh-ins, body measurements, and progress photos, automated engagement sequences that celebrate completion milestones, participant leaderboards, and before-and-after photo galleries. Payment handling supports upfront pricing, installment plans, and early-bird discounts. The system tracks completion rates, dropout points, and challenge-to-membership conversion rates so you can optimize your programs over time. Most operators see challenge completion rates improve by 15 to 20 percentage points after implementing the automated engagement features.",
-              },
-              {
-                question: "Which heart rate monitoring systems integrate with GymWyse?",
-                answer:
-                  "GymWyse integrates with MyZone, Polar, Wahoo, and Garmin heart rate monitoring systems. During live sessions, heart rate data streams to a coach dashboard that can be displayed on a shared screen for participant motivation and accountability. Post-session, each participant receives a personalized performance summary showing time in each heart rate zone, estimated calorie burn, average and peak heart rate, and effort points. Long-term trend reports track cardiovascular fitness improvements over weeks and months. The integration works with both chest strap and armband heart rate monitors from supported brands.",
-              },
-              {
-                question: "Can we manage multiple outdoor locations plus an indoor studio?",
-                answer:
-                  "Yes. GymWyse supports unlimited venue locations, each with its own GPS coordinates, capacity limits, equipment lists, parking instructions, and amenity information. You can schedule sessions across multiple parks, beaches, fields, and indoor studios on the same day. Each venue has a designated indoor backup location for weather switching. Location-based check-in verifies that participants are at the correct venue, preventing confusion when concurrent sessions run at different outdoor locations. The scheduling calendar provides a color-coded venue view so you can see your full multi-location operation at a glance.",
-              },
-              {
-                question: "How does GymWyse handle corporate wellness partnerships?",
-                answer:
-                  "GymWyse includes a corporate group management module that supports dedicated session scheduling for company teams, company-level billing with invoice generation, employee roster management with attendance tracking, and participation reporting formatted for HR departments. You can create branded landing pages for each corporate partner, set custom pricing tiers for group rates, and track individual employee attendance and performance. The system also manages the transition when corporate participants want to continue training individually with a personal membership, ensuring seamless billing changes and class access updates.",
-              },
-              {
-                question: "Is there a contract, and how does migration work?",
-                answer:
-                  "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Mindbody, Glofox, or any other platform typically takes three to five business days. Our onboarding team handles member data import, billing migration with no payment interruption, venue configuration including GPS coordinates for all your outdoor locations, challenge program setup, and trainer training sessions. Most bootcamp operators are fully operational on GymWyse within one week. We provide bootcamp-specific onboarding guides that cover multi-venue setup, weather workflows, challenge program configuration, and heart rate monitor integration.",
-              },
-            ].map((item, i) => (
+            {faqData.map((item, i) => (
               <motion.div
                 key={i}
                 className="glass-card overflow-hidden"
