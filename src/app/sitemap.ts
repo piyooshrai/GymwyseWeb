@@ -53,10 +53,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/au`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/ae`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
 
+    // New Solutions & Integration Pages
+    { url: `${baseUrl}/solutions/personal-trainers`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/solutions/recovery-management`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/integrations/wearables`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/security`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+
     // Tier 4 - Content & Support
     { url: `${baseUrl}/migration`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.6 },
     { url: `${baseUrl}/case-studies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/resources/churn-prevention-guide`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
 
     // Niche Vertical Pages
     ...verticalSlugs.map((slug) => ({
