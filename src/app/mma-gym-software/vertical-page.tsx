@@ -208,6 +208,51 @@ function WaiverTrackingVisual() {
   );
 }
 
+/* ── FAQ data ─────────────────────── */
+
+const faqData = [
+  {
+    question: "Can GymWyse handle scheduling for five or more martial arts disciplines?",
+    answer:
+      "Yes. GymWyse supports unlimited discipline types, each with independent scheduling, capacity limits, instructor assignments, and equipment requirements. Whether you offer BJJ gi, BJJ no-gi, Muay Thai, Boxing, Wrestling, MMA, Judo, Karate, or any other martial art, each discipline gets its own class type with automatic conflict detection for shared mat space and instructor availability. Students can filter the schedule by discipline and book classes across any art their membership covers.",
+  },
+  {
+    question: "How does belt and rank progression tracking work across multiple disciplines?",
+    answer:
+      "Each discipline has its own configurable rank hierarchy with custom belt levels, stripe or degree increments, minimum attendance requirements, time-in-rank rules, and technique assessment checklists. A student training in both BJJ and Muay Thai has separate progression tracks visible in their profile. Instructors receive automatic alerts when students reach promotion eligibility, and promotion events can be scheduled and managed through the platform. The student-facing app shows clear progression dashboards for each discipline.",
+  },
+  {
+    question: "Does GymWyse handle liability waivers and sparring consent forms?",
+    answer:
+      "Absolutely. GymWyse includes a complete legal compliance module with customizable waiver templates for general liability, sparring consent, competition participation, youth training authorization, and photography release. Digital signatures are collected during online registration, and the system blocks class check-in for any student with an expired or missing waiver. Renewal reminders are sent automatically. All signed waivers are stored with timestamps and are instantly accessible for insurance audits or incident review.",
+  },
+  {
+    question: "Can we track injuries and manage medical clearances for return to training?",
+    answer:
+      "Yes. The injury incident module provides structured reporting forms that coaches complete immediately when an injury occurs, capturing injury type, body part, mechanism, training activity, and witness information. Students flagged with an injury are automatically restricted from contact classes until medical clearance documentation is uploaded and verified. The incident database maintains a complete audit trail for insurance purposes, and aggregate injury data helps identify patterns that may indicate safety improvements needed in specific classes or activities.",
+  },
+  {
+    question: "How does the fight camp management module work?",
+    answer:
+      "Fight camp management lets you create structured preparation timelines for competitive fighters with customizable training phases, daily training load tracking across all disciplines, weight management dashboards with daily weigh-in logging and trend projections, sparring partner scheduling, and medical clearance verification. Coaches can monitor each fighter camp progress from a centralized dashboard, and fighters see their preparation status in the mobile app. Post-fight result logging and career record tracking build a comprehensive athlete development history.",
+  },
+  {
+    question: "Can we manage equipment inventory and cleaning schedules for gloves, pads, and mats?",
+    answer:
+      "Yes. GymWyse includes equipment asset management with inventory tracking for gloves, shin guards, focus pads, heavy bags, mats, and cage components. Automated cleaning schedule reminders ensure mats are sanitized between sessions, gloves are disinfected regularly, and equipment inspection logs are maintained for safety compliance. Coaches can flag damaged equipment during class, creating maintenance tickets that route to the responsible staff member. Utilization reports help you understand which gear needs replacement and budget accordingly.",
+  },
+  {
+    question: "Does GymWyse support youth martial arts programs with parent communication?",
+    answer:
+      "Yes. Youth program support includes age-appropriate class scheduling with separate capacity limits, parent or guardian contact management with communication portals, youth-specific waiver templates requiring parental signature, attendance tracking with parent notifications, belt progression visibility for families, and curriculum tracking aligned with your youth program structure. Parents can view their child progress, upcoming belt tests, and attendance history through their own app login, keeping families engaged and informed.",
+  },
+  {
+    question: "What does migration look like, and is there a contract?",
+    answer:
+      "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Kicksite, Spark Membership, or any other platform typically takes three to five business days. Our onboarding team handles student data import, belt and rank history migration, billing migration with no payment interruption, waiver template setup, and instructor training sessions. Most academies are fully operational on GymWyse within one week. We also provide combat-sports-specific onboarding guides tailored to the unique needs of MMA facilities.",
+  },
+];
+
 /* ── Internal links ─────────────────────── */
 
 const internalLinks = [
@@ -230,6 +275,23 @@ export function VerticalPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* ═══════════ HERO ═══════════ */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">
@@ -961,48 +1023,7 @@ export function VerticalPage() {
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              {
-                question: "Can GymWyse handle scheduling for five or more martial arts disciplines?",
-                answer:
-                  "Yes. GymWyse supports unlimited discipline types, each with independent scheduling, capacity limits, instructor assignments, and equipment requirements. Whether you offer BJJ gi, BJJ no-gi, Muay Thai, Boxing, Wrestling, MMA, Judo, Karate, or any other martial art, each discipline gets its own class type with automatic conflict detection for shared mat space and instructor availability. Students can filter the schedule by discipline and book classes across any art their membership covers.",
-              },
-              {
-                question: "How does belt and rank progression tracking work across multiple disciplines?",
-                answer:
-                  "Each discipline has its own configurable rank hierarchy with custom belt levels, stripe or degree increments, minimum attendance requirements, time-in-rank rules, and technique assessment checklists. A student training in both BJJ and Muay Thai has separate progression tracks visible in their profile. Instructors receive automatic alerts when students reach promotion eligibility, and promotion events can be scheduled and managed through the platform. The student-facing app shows clear progression dashboards for each discipline.",
-              },
-              {
-                question: "Does GymWyse handle liability waivers and sparring consent forms?",
-                answer:
-                  "Absolutely. GymWyse includes a complete legal compliance module with customizable waiver templates for general liability, sparring consent, competition participation, youth training authorization, and photography release. Digital signatures are collected during online registration, and the system blocks class check-in for any student with an expired or missing waiver. Renewal reminders are sent automatically. All signed waivers are stored with timestamps and are instantly accessible for insurance audits or incident review.",
-              },
-              {
-                question: "Can we track injuries and manage medical clearances for return to training?",
-                answer:
-                  "Yes. The injury incident module provides structured reporting forms that coaches complete immediately when an injury occurs, capturing injury type, body part, mechanism, training activity, and witness information. Students flagged with an injury are automatically restricted from contact classes until medical clearance documentation is uploaded and verified. The incident database maintains a complete audit trail for insurance purposes, and aggregate injury data helps identify patterns that may indicate safety improvements needed in specific classes or activities.",
-              },
-              {
-                question: "How does the fight camp management module work?",
-                answer:
-                  "Fight camp management lets you create structured preparation timelines for competitive fighters with customizable training phases, daily training load tracking across all disciplines, weight management dashboards with daily weigh-in logging and trend projections, sparring partner scheduling, and medical clearance verification. Coaches can monitor each fighter camp progress from a centralized dashboard, and fighters see their preparation status in the mobile app. Post-fight result logging and career record tracking build a comprehensive athlete development history.",
-              },
-              {
-                question: "Can we manage equipment inventory and cleaning schedules for gloves, pads, and mats?",
-                answer:
-                  "Yes. GymWyse includes equipment asset management with inventory tracking for gloves, shin guards, focus pads, heavy bags, mats, and cage components. Automated cleaning schedule reminders ensure mats are sanitized between sessions, gloves are disinfected regularly, and equipment inspection logs are maintained for safety compliance. Coaches can flag damaged equipment during class, creating maintenance tickets that route to the responsible staff member. Utilization reports help you understand which gear needs replacement and budget accordingly.",
-              },
-              {
-                question: "Does GymWyse support youth martial arts programs with parent communication?",
-                answer:
-                  "Yes. Youth program support includes age-appropriate class scheduling with separate capacity limits, parent or guardian contact management with communication portals, youth-specific waiver templates requiring parental signature, attendance tracking with parent notifications, belt progression visibility for families, and curriculum tracking aligned with your youth program structure. Parents can view their child progress, upcoming belt tests, and attendance history through their own app login, keeping families engaged and informed.",
-              },
-              {
-                question: "What does migration look like, and is there a contract?",
-                answer:
-                  "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Kicksite, Spark Membership, or any other platform typically takes three to five business days. Our onboarding team handles student data import, belt and rank history migration, billing migration with no payment interruption, waiver template setup, and instructor training sessions. Most academies are fully operational on GymWyse within one week. We also provide combat-sports-specific onboarding guides tailored to the unique needs of MMA facilities.",
-              },
-            ].map((item, i) => (
+            {faqData.map((item, i) => (
               <motion.div
                 key={i}
                 className="glass-card overflow-hidden"

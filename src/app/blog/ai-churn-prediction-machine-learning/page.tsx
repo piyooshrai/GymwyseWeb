@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import { AIChurnPredictionPage } from "./blog-page";
+
+export const metadata: Metadata = {
+  title: "AI Churn Prediction: How Machine Learning Saves 18 Members Per Month | GymWyse Blog",
+  description: "Inside the 14 behavioral signals our churn prediction model analyzes.",
+  openGraph: {
+    title: "AI Churn Prediction: How Machine Learning Saves 18 Members Per Month",
+    description: "Inside the 14 behavioral signals our churn prediction model analyzes.",
+    type: "article",
+    publishedTime: "2026-01-15",
+    authors: ["GymWyse Product Team"],
+  },
+};
+
+export default function Page() {
+  return <AIChurnPredictionPage />;
+}

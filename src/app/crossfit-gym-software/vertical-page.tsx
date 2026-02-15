@@ -224,6 +224,51 @@ function MembershipTiersVisual() {
   );
 }
 
+/* ── FAQ data ─────────────────────── */
+
+const faqData = [
+  {
+    question: "Can GymWyse replace SugarWOD or Beyond the Whiteboard for WOD tracking?",
+    answer:
+      "Yes. GymWyse includes a complete WOD programming and tracking system with a digital whiteboard, real-time leaderboards, benchmark WOD tracking for over 50 named workouts, and athlete PR logging. Most affiliates eliminate their SugarWOD or BTWB subscription entirely after switching, saving an additional $50 to $75 per month. Athletes can log scores from their phones, view historical performance data, and track progress across every benchmark and custom workout you program.",
+  },
+  {
+    question: "How does GymWyse handle CrossFit-specific membership tiers like barbell club and open gym?",
+    answer:
+      "GymWyse supports unlimited custom membership tiers with independent pricing, access rules, and class reservation permissions. You can configure unlimited class memberships, limited punch cards, barbell-club-only memberships that grant access to specific open platform hours, open gym passes, drop-in day passes, and competition team add-ons. Each tier can have its own billing cycle, cancellation policy, and automatic upgrade or downgrade paths. Family plans with percentage-based sibling discounts are also built in.",
+  },
+  {
+    question: "Can we track equipment maintenance for barbells, rowers, and assault bikes?",
+    answer:
+      "Absolutely. GymWyse includes a full equipment asset management system where you register every piece of gear with purchase dates, warranty information, and serial numbers. Set automated maintenance schedules for rower chain lubrication, barbell bearing service, assault bike calibration, and pull-up rig bolt inspections. Coaches can flag equipment issues during class, creating maintenance tickets that route to the responsible staff member. You will also get utilization analytics to inform future purchasing decisions.",
+  },
+  {
+    question: "Does GymWyse support in-house competition and throwdown management?",
+    answer:
+      "Yes. The competition module lets you create multi-event throwdowns with customizable scoring systems, heat scheduling based on athlete registration, real-time score entry by judges, and automatic leaderboard calculations. You can generate a public leaderboard link to share on social media and display on gym TVs during the event. Athlete registration and payment collection are handled within the platform, making it easy to run quarterly throwdowns as both community events and revenue generators.",
+  },
+  {
+    question: "How does the system handle the CrossFit Open and Quarterfinals prep?",
+    answer:
+      "GymWyse allows you to create dedicated competition prep programming tracks that run alongside your regular class programming. Athletes enrolled in the competitor track see their additional workouts in the app alongside the daily WOD. During the Open season, you can set up weekly Open workout logging with automatic ranking against your box members. For Quarterfinals prep, the system supports periodized programming blocks with progressive overload tracking to help athletes peak at the right time.",
+  },
+  {
+    question: "What reporting and analytics does GymWyse provide for CrossFit boxes?",
+    answer:
+      "GymWyse provides comprehensive analytics including revenue breakdown by membership tier, attendance patterns by class time and day of week, member retention curves with early-warning churn indicators, coach utilization metrics, equipment usage reports, and new member conversion funnel tracking. The dashboard gives you at-a-glance visibility into your box health with key metrics like monthly recurring revenue, average revenue per member, class attendance rates, and member lifetime value calculations.",
+  },
+  {
+    question: "Can members book classes and log scores from their phones?",
+    answer:
+      "Yes. The GymWyse member app is available for iOS and Android and gives athletes everything they need: class schedule browsing and booking with waitlist support, WOD previews with scaling options, score logging with Rx, scaled, and Rx-plus designations, PR tracking across all benchmarks and lifts, leaderboard viewing, and account management including payment method updates and membership freezes. Push notifications alert members to WOD postings, class reminders, PR celebrations, and billing updates.",
+  },
+  {
+    question: "Is there a contract or setup fee, and how long does migration take?",
+    answer:
+      "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Wodify, PushPress, or any other platform typically takes three to five business days. Our onboarding team handles member data import, billing migration with no payment interruption, WOD history transfer where available, and coach training sessions. Most affiliates are fully operational on GymWyse within one week of starting the migration process.",
+  },
+];
+
 /* ── Internal links ─────────────────────── */
 
 const internalLinks = [
@@ -246,6 +291,23 @@ export function VerticalPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqData.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* ═══════════ HERO ═══════════ */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">
@@ -936,48 +998,7 @@ export function VerticalPage() {
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              {
-                question: "Can GymWyse replace SugarWOD or Beyond the Whiteboard for WOD tracking?",
-                answer:
-                  "Yes. GymWyse includes a complete WOD programming and tracking system with a digital whiteboard, real-time leaderboards, benchmark WOD tracking for over 50 named workouts, and athlete PR logging. Most affiliates eliminate their SugarWOD or BTWB subscription entirely after switching, saving an additional $50 to $75 per month. Athletes can log scores from their phones, view historical performance data, and track progress across every benchmark and custom workout you program.",
-              },
-              {
-                question: "How does GymWyse handle CrossFit-specific membership tiers like barbell club and open gym?",
-                answer:
-                  "GymWyse supports unlimited custom membership tiers with independent pricing, access rules, and class reservation permissions. You can configure unlimited class memberships, limited punch cards, barbell-club-only memberships that grant access to specific open platform hours, open gym passes, drop-in day passes, and competition team add-ons. Each tier can have its own billing cycle, cancellation policy, and automatic upgrade or downgrade paths. Family plans with percentage-based sibling discounts are also built in.",
-              },
-              {
-                question: "Can we track equipment maintenance for barbells, rowers, and assault bikes?",
-                answer:
-                  "Absolutely. GymWyse includes a full equipment asset management system where you register every piece of gear with purchase dates, warranty information, and serial numbers. Set automated maintenance schedules for rower chain lubrication, barbell bearing service, assault bike calibration, and pull-up rig bolt inspections. Coaches can flag equipment issues during class, creating maintenance tickets that route to the responsible staff member. You will also get utilization analytics to inform future purchasing decisions.",
-              },
-              {
-                question: "Does GymWyse support in-house competition and throwdown management?",
-                answer:
-                  "Yes. The competition module lets you create multi-event throwdowns with customizable scoring systems, heat scheduling based on athlete registration, real-time score entry by judges, and automatic leaderboard calculations. You can generate a public leaderboard link to share on social media and display on gym TVs during the event. Athlete registration and payment collection are handled within the platform, making it easy to run quarterly throwdowns as both community events and revenue generators.",
-              },
-              {
-                question: "How does the system handle the CrossFit Open and Quarterfinals prep?",
-                answer:
-                  "GymWyse allows you to create dedicated competition prep programming tracks that run alongside your regular class programming. Athletes enrolled in the competitor track see their additional workouts in the app alongside the daily WOD. During the Open season, you can set up weekly Open workout logging with automatic ranking against your box members. For Quarterfinals prep, the system supports periodized programming blocks with progressive overload tracking to help athletes peak at the right time.",
-              },
-              {
-                question: "What reporting and analytics does GymWyse provide for CrossFit boxes?",
-                answer:
-                  "GymWyse provides comprehensive analytics including revenue breakdown by membership tier, attendance patterns by class time and day of week, member retention curves with early-warning churn indicators, coach utilization metrics, equipment usage reports, and new member conversion funnel tracking. The dashboard gives you at-a-glance visibility into your box health with key metrics like monthly recurring revenue, average revenue per member, class attendance rates, and member lifetime value calculations.",
-              },
-              {
-                question: "Can members book classes and log scores from their phones?",
-                answer:
-                  "Yes. The GymWyse member app is available for iOS and Android and gives athletes everything they need: class schedule browsing and booking with waitlist support, WOD previews with scaling options, score logging with Rx, scaled, and Rx-plus designations, PR tracking across all benchmarks and lifts, leaderboard viewing, and account management including payment method updates and membership freezes. Push notifications alert members to WOD postings, class reminders, PR celebrations, and billing updates.",
-              },
-              {
-                question: "Is there a contract or setup fee, and how long does migration take?",
-                answer:
-                  "There is no contract and no setup fee. GymWyse is $99 per month with a 14-day free trial, and you can cancel anytime. Migration from Zen Planner, Wodify, PushPress, or any other platform typically takes three to five business days. Our onboarding team handles member data import, billing migration with no payment interruption, WOD history transfer where available, and coach training sessions. Most affiliates are fully operational on GymWyse within one week of starting the migration process.",
-              },
-            ].map((item, i) => (
+            {faqData.map((item, i) => (
               <motion.div
                 key={i}
                 className="glass-card overflow-hidden"
