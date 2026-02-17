@@ -266,6 +266,69 @@ export default function HomePage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "GymWyse",
+            url: "https://gymwyse.fit",
+            logo: "https://gymwyse.fit/logos/logo-white.png",
+            description: "Gym management software that proves its ROI 18x over. Revenue analytics, churn prevention, and multi-location management for modern gyms.",
+            foundingDate: "2024",
+            sameAs: [],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "sales",
+              url: "https://gymwyse.fit/demo",
+            },
+            areaServed: [
+              { "@type": "Country", name: "United States" },
+              { "@type": "Country", name: "United Kingdom" },
+              { "@type": "Country", name: "Australia" },
+              { "@type": "Country", name: "United Arab Emirates" },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "GymWyse",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web, iOS, Android",
+            url: "https://gymwyse.fit",
+            description: "Gym management software with real-time revenue analytics, AI-powered churn prevention, automated billing, class scheduling, and branded member app.",
+            offers: {
+              "@type": "Offer",
+              price: "99",
+              priceCurrency: "USD",
+              priceValidUntil: "2026-12-31",
+              url: "https://gymwyse.fit/pricing",
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              ratingCount: "200",
+              bestRating: "5",
+            },
+            featureList: [
+              "Real-time Revenue Analytics",
+              "AI-Powered Churn Prevention",
+              "Automated Billing & Payment Recovery",
+              "Class Scheduling & Waitlists",
+              "Branded Member Mobile App",
+              "Multi-Location Portfolio Management",
+              "QR Equipment Tracking",
+              "Wearable Device Integration",
+            ],
+          }),
+        }}
+      />
       {/* ═══════════════════════════════════════════════════════
           SECTION 1: HERO
           ═══════════════════════════════════════════════════════ */}
@@ -332,13 +395,13 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 pt-6">
                 <Link href="/roi-calculator">
                   <Button variant="primary" size="lg">
-                    Calculate Your ROI
+                    Start Your Churn Recovery Audit
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/demo">
                   <Button variant="secondary" size="lg">
-                    Book a Demo
+                    Book a Command Center Walkthrough
                   </Button>
                 </Link>
               </div>
@@ -914,13 +977,13 @@ export default function HomePage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/demo">
                   <Button variant="primary" size="lg">
-                    Book a 15-Minute Demo
+                    See the Revenue Command Center Live
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/roi-calculator">
                   <Button variant="secondary" size="lg">
-                    Calculate Your Savings
+                    Start Your Free 14-Day Trial
                   </Button>
                 </Link>
               </div>
@@ -1189,13 +1252,13 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/demo">
                 <Button variant="primary" size="xl">
-                  Start Free Trial
+                  Start Your Free 14-Day Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/roi-calculator">
                 <Button variant="secondary" size="xl">
-                  Calculate Your ROI
+                  Calculate Your Savings
                 </Button>
               </Link>
             </div>

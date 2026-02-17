@@ -136,6 +136,25 @@ export function AEPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "GymWyse UAE & Middle East",
+            url: "https://gymwyse.fit/ae",
+            description: "Gym management software for the UAE and Middle East. Multi-currency billing (AED, SAR, QAR), local data hosting, and Arabic language support.",
+            areaServed: [
+              { "@type": "Country", name: "United Arab Emirates" },
+              { "@type": "Country", name: "Saudi Arabia" },
+              { "@type": "Country", name: "Qatar" },
+              { "@type": "Country", name: "Kuwait" },
+            ],
+            parentOrganization: { "@type": "Organization", name: "GymWyse", url: "https://gymwyse.fit" },
+          }),
+        }}
+      />
       {/* ============================================================ */}
       {/* HERO                                                         */}
       {/* ============================================================ */}

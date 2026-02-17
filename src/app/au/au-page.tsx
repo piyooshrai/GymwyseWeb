@@ -175,6 +175,20 @@ export function AUPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "GymWyse Australia",
+            url: "https://gymwyse.fit/au",
+            description: "Gym management software for Australia. BPAY support, GST handling, Australian privacy compliance, and local payment processing.",
+            areaServed: { "@type": "Country", name: "Australia" },
+            parentOrganization: { "@type": "Organization", name: "GymWyse", url: "https://gymwyse.fit" },
+          }),
+        }}
+      />
       {/* ============================================================ */}
       {/*  1. HERO                                                      */}
       {/* ============================================================ */}

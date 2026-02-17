@@ -1076,6 +1076,20 @@ export function VerticalPage() {
                 </Button>
               </Link>
             </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+              <Link
+                href="/platform/revenue-analytics"
+                className="text-electric-green underline underline-offset-2 hover:brightness-110"
+              >
+                Explore the Revenue Command Center
+              </Link>
+              <Link
+                href="/blog"
+                className="text-electric-green underline underline-offset-2 hover:brightness-110"
+              >
+                Read Our Latest Guides
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

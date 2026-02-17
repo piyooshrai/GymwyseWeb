@@ -240,6 +240,23 @@ export function RevenueAnalyticsPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "GymWyse Revenue Analytics",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://gymwyse.fit/platform/revenue-analytics",
+            description: "Real-time gym revenue analytics dashboard with MRR tracking, per-class P&L, churn forecasting, and failed payment recovery automation.",
+            offers: { "@type": "Offer", price: "99", priceCurrency: "USD" },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "200", bestRating: "5" },
+            featureList: ["Monthly Recurring Revenue Tracking", "Per-Class Profitability Analysis", "Failed Payment Recovery", "Churn Forecasting", "Multi-Location Revenue Consolidation"],
+          }),
+        }}
+      />
       {/* ============================================================ */}
       {/* 1. HERO SECTION                                              */}
       {/* ============================================================ */}
