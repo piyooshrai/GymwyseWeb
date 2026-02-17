@@ -32,6 +32,31 @@ export function CityPageTemplate({ data }: { data: CityPageData }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: `GymWyse - Gym Management Software in ${data.city}`,
+            url: `https://gymwyse.fit/${data.slug}`,
+            description: `Gym management software for fitness businesses in ${data.city}, ${countryLabel}. Revenue analytics, churn prevention, and automated billing.`,
+            areaServed: {
+              "@type": "City",
+              name: data.city,
+              containedInPlace: {
+                "@type": "Country",
+                name: countryLabel,
+              },
+            },
+            parentOrganization: {
+              "@type": "Organization",
+              name: "GymWyse",
+              url: "https://gymwyse.fit",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">

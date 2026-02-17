@@ -148,6 +148,22 @@ export function EquipmentQRPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "GymWyse Equipment QR Tracking",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://gymwyse.fit/platform/equipment-qr",
+            description: "QR-based gym equipment tracking with preventive maintenance scheduling, usage analytics, and warranty management.",
+            offers: { "@type": "Offer", price: "99", priceCurrency: "USD" },
+            featureList: ["QR Code Equipment Scanning", "Preventive Maintenance Scheduling", "Usage Analytics", "Warranty Management", "Equipment Lifecycle Tracking"],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">

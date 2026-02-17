@@ -203,6 +203,23 @@ export function MemberAppPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "GymWyse Member App",
+            applicationCategory: "HealthApplication",
+            operatingSystem: "iOS, Android",
+            url: "https://gymwyse.fit/platform/member-app",
+            description: "White-label branded gym member app with class booking, workout tracking, push notifications, and in-app payments.",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Included with all GymWyse plans" },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "200", bestRating: "5" },
+            featureList: ["Class Booking & Waitlists", "Workout Tracking", "Push Notifications", "In-App Payments", "Progress Photos & Measurements"],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-24 md:py-32 bg-deep-space">
         <div className="max-w-7xl mx-auto px-6">

@@ -10,29 +10,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const solutions = [
   {
+    name: "Revenue Command Center",
+    href: "/platform/revenue-analytics",
+    desc: "Real-time revenue analytics & forecasting",
+  },
+  {
+    name: "Predictive Churn Prevention",
+    href: "/reduce-gym-member-churn",
+    desc: "AI-powered member retention",
+  },
+  {
     name: "Independent Gyms",
     href: "/solutions/independent-gyms",
     desc: "Single-location gym management",
   },
   {
-    name: "Growing Chains (2-5 locations)",
+    name: "Multi-Location Chains",
     href: "/solutions/multi-location",
-    desc: "Multi-location portfolio tools",
+    desc: "Portfolio-wide P&L management",
   },
   {
-    name: "Boutique Fitness Studios",
+    name: "Boutique Studios",
     href: "/solutions/boutique-fitness",
     desc: "Yoga, pilates, barre studios",
-  },
-  {
-    name: "Reduce Member Churn",
-    href: "/reduce-gym-member-churn",
-    desc: "AI-powered retention tools",
-  },
-  {
-    name: "Increase Revenue",
-    href: "/increase-gym-revenue",
-    desc: "Revenue analytics & optimization",
   },
 ];
 
@@ -49,14 +49,12 @@ const verticals = [
 ];
 
 const resources = [
-  { name: "Blog", href: "/blog" },
+  { name: "Blog & Guides", href: "/blog" },
   { name: "Case Studies", href: "/case-studies" },
   { name: "ROI Calculator", href: "/roi-calculator" },
-  { name: "Migration Guides", href: "/migration" },
-  { name: "Class Scheduling", href: "/gym-class-scheduling" },
-  { name: "Payment Processing", href: "/gym-payment-processing" },
-  { name: "Billing Software", href: "/gym-billing-software" },
-  { name: "PT Software", href: "/personal-training-software" },
+  { name: "Migration Hub", href: "/migration" },
+  { name: "Churn Prevention Guide", href: "/resources/churn-prevention-guide" },
+  { name: "Security & Compliance", href: "/security" },
 ];
 
 export function Header() {
@@ -204,7 +202,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <Link href="/demo">
               <Button variant="primary" size="sm">
-                Book Demo
+                Start Your Free Trial
               </Button>
             </Link>
           </div>
@@ -294,7 +292,7 @@ export function Header() {
               <div className="pt-4 pb-2">
                 <Link href="/demo" onClick={() => setMobileOpen(false)}>
                   <Button variant="primary" size="lg" className="w-full">
-                    Book Demo
+                    Start Your Free Trial
                   </Button>
                 </Link>
               </div>

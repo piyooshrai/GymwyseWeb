@@ -353,6 +353,20 @@ export function UKPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "GymWyse UK",
+            url: "https://gymwyse.fit/uk",
+            description: "Gym management software for the United Kingdom. GDPR compliant, BACS Direct Debit support, VAT handling, and UK-specific fitness business tools.",
+            areaServed: { "@type": "Country", name: "United Kingdom" },
+            parentOrganization: { "@type": "Organization", name: "GymWyse", url: "https://gymwyse.fit" },
+          }),
+        }}
+      />
       {/* ─── Hero Section ─── */}
       <section className="bg-deep-space py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6">
