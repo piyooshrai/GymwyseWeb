@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Multi-Location Gym Management Software - GymWyse",
   description:
     "Manage 2-100+ gym locations from one dashboard. Cross-location analytics, centralized member database, volume pricing. $79/location.",
+
+  openGraph: {
+    title: "Multi-Location Gym Management Software - GymWyse",
+    description:
+      "Manage 2-100+ gym locations from one dashboard. Cross-location analytics, centralized member database, volume pricing. $79/location.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 export default function Page() {

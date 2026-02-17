@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Gym Management Software Dubai & UAE - Arabic Support & AED Pricing",
   description:
     "UAE gym software with RTL Arabic support, AED pricing, and local data hosting. Built for gyms in Dubai, Abu Dhabi, Riyadh. Free trial.",
+
+  openGraph: {
+    title: "Gym Management Software Dubai & UAE - Arabic Support & AED Pricing",
+    description:
+      "UAE gym software with RTL Arabic support, AED pricing, and local data hosting. Built for gyms in Dubai, Abu Dhabi, Riyadh. Free trial.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 export default function Page() {

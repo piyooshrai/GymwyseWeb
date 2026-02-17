@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   title: "Blog - Gym Management Insights & Best Practices | GymWyse",
   description:
     "Expert insights on gym revenue optimization, member retention, churn prevention, and multi-location management from the GymWyse team.",
+
+  openGraph: {
+    title: "Blog - Gym Management Insights & Best Practices | GymWyse",
+    description:
+      "Expert insights on gym revenue optimization, member retention, churn prevention, and multi-location management from the GymWyse team.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 const categoryColors: Record<string, string> = {

@@ -18,6 +18,15 @@ export const metadata: Metadata = {
     "Gym Software Case Studies — Real Results from Real Gyms | GymWyse",
   description:
     "See proven gym management software results: 32% average churn reduction, $2.1M+ revenue recovered, and 200+ gyms transformed. Read detailed case studies from independent gyms, boutique studios, and multi-location chains.",
+
+  openGraph: {
+    title: "Gym Software Case Studies — Real Results from Real Gyms | GymWyse",
+    description:
+      "See proven gym management software results: 32% average churn reduction, $2.1M+ revenue recovered, and 200+ gyms transformed. Read detailed case studies from independent gyms, boutique studios, and multi-location chains.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 const caseStudies = [

@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "GymWyse Pricing - Transparent Gym Software Pricing",
   description:
     "No setup fees. No contracts. $99/mo for independent gyms. Compare vs Mindbody, Zen Planner, Glofox. See why 200+ gyms switched. Start 14-day free trial.",
+
+  openGraph: {
+    title: "GymWyse Pricing - Transparent Gym Software Pricing",
+    description:
+      "No setup fees. No contracts. $99/mo for independent gyms. Compare vs Mindbody, Zen Planner, Glofox. See why 200+ gyms switched. Start 14-day free trial.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 export default function PricingPage() {

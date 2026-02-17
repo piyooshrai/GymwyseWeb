@@ -42,9 +42,9 @@ export async function POST(request: NextRequest) {
       </div>
     `;
 
-    // Send notification to admin
+    // Send notification to admin (info@the-algo.com)
     await sendEmail({
-      to: process.env.AWS_SES_FROM_EMAIL!,
+      to: process.env.AWS_SES_NOTIFICATION_EMAIL || process.env.AWS_SES_FROM_EMAIL!,
       subject: `New Demo Request: ${name} - ${gymName || "No gym name"}`,
       html: adminHtml,
       replyTo: email,

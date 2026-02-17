@@ -6,6 +6,7 @@ import { GoogleAnalytics } from "@/components/google-analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gymwyse.fit"),
   title: "GymWyse - Gym Management Software That Proves Its ROI",
   description:
     "Track revenue in real-time. Predict churn. Recover $12K+/month. The operating system for independent gyms and multi-location fitness operators.",
@@ -19,8 +20,23 @@ export const metadata: Metadata = {
       "Revenue analytics, churn prevention, and multi-location management for modern gyms.",
     url: "https://gymwyse.fit",
     siteName: "GymWyse",
-    images: [{ url: "/logos/logo-white.png", width: 800, height: 600 }],
+    locale: "en_US",
+    images: [
+      {
+        url: "https://gymwyse.fit/logos/logo-white.png",
+        width: 800,
+        height: 600,
+        alt: "GymWyse - Gym Management Software",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GymWyse - Gym Software That Pays for Itself 18x Over",
+    description:
+      "Revenue analytics, churn prevention, and multi-location management for modern gyms.",
+    images: ["https://gymwyse.fit/logos/logo-white.png"],
   },
   alternates: {
     canonical: "https://gymwyse.fit",
