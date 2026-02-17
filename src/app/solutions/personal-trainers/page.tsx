@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Manage clients, schedule sessions, process payments, and build workout programs. You don't need a gym to use GymWyse. You just need clients.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

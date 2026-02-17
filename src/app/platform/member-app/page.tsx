@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Boost member engagement by 40% with AI Avatar coaches. 6 personality-driven fitness guides. Included free with every GymWyse plan.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

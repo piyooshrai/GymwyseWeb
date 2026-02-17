@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Manage cold plunge, infrared sauna, cryotherapy, and IV drip bookings. Track recovery revenue, automate upsells, and maximize every time slot.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Expert insights on gym revenue optimization, member retention, churn prevention, and multi-location management from the GymWyse team.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 
