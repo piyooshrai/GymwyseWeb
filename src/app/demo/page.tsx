@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "See GymWyse in action. Book a personalized demo and discover how to track revenue, predict churn, and recover $12K+/month for your gym.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

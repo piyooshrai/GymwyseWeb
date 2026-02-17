@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Track gym revenue in real time with MRR dashboards, per-member LTV, profit margins by service, failed payment recovery, and 12-month forecasting. Included in every GymWyse plan.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

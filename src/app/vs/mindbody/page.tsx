@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Compare GymWyse and Mindbody. No setup fees ($500 savings). No contracts. Revenue analytics included. See why independent gyms are switching. Migration takes 7-10 days.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

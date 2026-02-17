@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "See exactly how much GymWyse will save you vs Mindbody, Zen Planner, or Glofox. Calculate churn savings, payment recovery, and net ROI. Free interactive tool for gym owners.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

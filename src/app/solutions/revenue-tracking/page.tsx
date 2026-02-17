@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Real-time revenue tracking for gyms. MRR dashboard, revenue stream breakdown, failed payment recovery. Know where every dollar goes. $99/mo.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

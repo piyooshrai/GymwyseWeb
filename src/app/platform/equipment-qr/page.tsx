@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "QR code equipment management for gyms. Members scan to report issues. Track maintenance history. Prevent liability. $39/mo add-on.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 

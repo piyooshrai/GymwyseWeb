@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://gymwyse.fit/logos/logo-white.png",
+        url: "https://gymwyse.fit/og-default.png",
         width: 800,
         height: 600,
         alt: "GymWyse - Gym Management Software",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "GymWyse - Gym Software That Pays for Itself 18x Over",
     description:
       "Revenue analytics, churn prevention, and multi-location management for modern gyms.",
-    images: ["https://gymwyse.fit/logos/logo-white.png"],
+    images: ["https://gymwyse.fit/og-default.png"],
   },
   alternates: {
     canonical: "https://gymwyse.fit",

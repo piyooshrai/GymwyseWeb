@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "GymWyse security: AES-256 encryption, GDPR compliance, regional data hosting, SOC 2 certification. Your members' data is safe with us.",
     type: "website",
     siteName: "GymWyse",
-    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+    images: [{ url: "https://gymwyse.fit/og-default.png", width: 1200, height: 630, alt: "GymWyse - Gym Management Software" }],
   },
 };
 
