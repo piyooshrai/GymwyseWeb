@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "GymWyse vs PushPress - Advanced Gym Management Alternative",
   description:
     "Compare GymWyse and PushPress. Better revenue analytics, AI features, and multi-location management. See why gyms prefer GymWyse.",
+
+  openGraph: {
+    title: "GymWyse vs PushPress - Advanced Gym Management Alternative",
+    description:
+      "Compare GymWyse and PushPress. Better revenue analytics, AI features, and multi-location management. See why gyms prefer GymWyse.",
+    type: "website",
+    siteName: "GymWyse",
+    images: [{ url: "https://gymwyse.fit/logos/logo-white.png", width: 800, height: 600, alt: "GymWyse - Gym Management Software" }],
+  },
 };
 
 export default function Page() {
